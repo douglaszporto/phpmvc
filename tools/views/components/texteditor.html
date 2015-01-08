@@ -1,0 +1,18 @@
+<div class="text-editor-content">
+	<div class="text-editor-opbar">
+		<button class="text-editor-button text-editor-op-b" title="Negrito">&#xe06f;</button>
+		<button class="text-editor-button text-editor-op-i"  ng-if="op.indexOf('i') !== -1" title="Itálico">&#xe0b2;</button>
+		<button class="text-editor-button text-editor-op-u"  ng-if="op.indexOf('u') !== -1" title="Sublinhado">&#xe15a;</button>
+		<button class="text-editor-button text-editor-op-ol" ng-if="op.indexOf('ol') !== -1" title="Lista Ordenada">&#xe003;</button>
+		<button class="text-editor-button text-editor-op-ul" ng-if="op.indexOf('ul') !== -1" title="Lista Não-Ordenada">&#xe004;</button>
+		<button class="text-editor-button text-editor-op-h2" ng-if="op.indexOf('h2') !== -1" title="Título principal">&#xe20b;</button>
+		<button class="text-editor-button text-editor-op-h3" ng-if="op.indexOf('h3') !== -1" title="Subtítulo" style="font-size:10px;">&#xe20b;</button>
+		<button class="text-editor-button text-editor-op-hr" ng-if="op.indexOf('hr') !== -1" title="Login">}</button>
+		<button class="text-editor-button text-editor-op-img" ng-if="op.indexOf('img') !== -1" title="Imagem">&#xe0e8;</button>
+	</div>
+	<div contenteditable="true" class="text-editor"></div>
+	<form enctype="multipart/form-data" style="display:none;">
+		<input type="file" name="uploader" style="display:none;" id="text-editor-uploader" onchange="angular.element(this).scope().imageUpload(this);"/>
+		<input type="text" name="uplodaded_name" id="uplodaded_name" style="display:none;" ng-model="imageLink"/>
+	</form>
+</div>

@@ -1,0 +1,47 @@
+.green{
+	color:#0b0;
+}
+
+.red{
+	color:#f00;
+}
+
+.button{
+	text-decoration: none;
+}
+
+.test-title{
+	font-size:16px;
+	color:#00f;
+	padding:30px 20px 10px 20px;
+	border-bottom: 1px solid #cacaca;
+}
+
+.test-cabec{
+	font-size:11px;
+	color:#999;
+}
+
+.test-cabec td{
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+}
+
+.test-test{
+	font-size:11px;
+}
+.test-test:hover{
+	background-color: #fff;
+}
+
+.test-test td{
+	height:20px;
+	line-height:20px;
+	padding-left: 20px;
+}
+
+.test-value{
+	color:#fa2;
+	font-size:12px !important;
+}

@@ -1,0 +1,16 @@
+<form enctype="multipart/form-data" class="component-uploader-form">
+	<div class="component-uploader">
+		<input type="file" name="uploader" style="display:none;" onchange="angular.element(this).scope().sendFile(this);"/>
+
+		<div class="component-fake-uploader">
+			<button class="component-fake-uploader-button">
+				<span class="component-fake-uploader-icon">&#xe2c1;</span>
+				<span class="component-fake-uploader-label">Enviar arquivo</span>
+			</button>
+			<span class="component-fake-uploader-file-selected" ng-bind-html="getFilename() | html">&nbsp;</span>
+			<span class="component-fake-uploader-progress" ng-bind-html="getProgress() | html" ng-if="error == ''">&nbsp;</span>
+			<span class="component-fake-uploader-error" ng-bind-html="getError() | html">&nbsp;</span>
+		</div>
+		<br />
+	</div>
+</form>

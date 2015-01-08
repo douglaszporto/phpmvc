@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} (?:grid/)([^/]*)$ [NC]
+RewriteRule (?:grid/)([^/]*)$ grid.php?m=$1 [QSA,L,NC]
+
+RewriteCond %{REQUEST_URI} (?:insert/)([^/]*)$ [NC]
+RewriteRule (?:insert/)([^/]*)$ insert.php?m=$1 [QSA,L,NC]
+
+RewriteCond %{REQUEST_URI} (?:update/)([^/]*)$ [NC]
+RewriteRule (?:update/)([^/]*)$ update.php?m=$1 [QSA,L,NC]
+
+RewriteCond %{REQUEST_URI} (?:delete/)([^/]*)$ [NC]
+RewriteRule (?:delete/)([^/]*)$ delete.php?m=$1 [QSA,L,NC]

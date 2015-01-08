@@ -1,0 +1,124 @@
+.product{
+	box-sizing:border-box;
+	width:50%;
+	padding:20px;
+	float:left;
+	position:relative;
+}
+.product:hover{
+	background-color: #fff;
+}
+
+.product h2{
+	font-size:20px;
+}
+
+.product a{
+	color: #82c040;
+	font-size:12px;
+}
+
+.product-add,
+.product-features,
+.product-remove,
+.product-edit{
+	float:right;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	position:absolute;
+	top:50%;
+	margin-top:-20px;
+	display:none;
+	font-family:'IconPackage'
+}
+.product-add{
+	display:block;
+	right:20px;
+}
+.product-edit{
+	right:120px;
+	background: #0af;
+	background: linear-gradient(0deg, #08b, #0af);
+}
+.product-edit:hover{
+	background: #0af;
+	background: linear-gradient(0deg, #19c, #1bf);
+}
+.product-features{
+	right:70px;
+	background: #aa0;
+	background: linear-gradient(0deg, #aa0, #dd0);
+}
+.product-features:hover{
+	background: #dd0;
+	background: linear-gradient(0deg, #bb0, #ee0);
+}
+.product-remove{
+	right:20px;
+	background: #b33;
+	background: linear-gradient(0deg, #b33, #f44);
+}
+.product-remove:hover{
+	background: #f44;
+	background: linear-gradient(0deg, #c44, #f55);
+}
+
+.product:hover .product-edit,
+.product:hover .product-remove,
+.product:hover .product-features{
+	display:block;
+}
+
+
+.product-feature-new-item,
+.product-feature-item{
+	float:left;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	font-size:12px;
+	padding-left:5px;
+	box-sizing:border-box;
+	cursor:pointer;
+}
+.product-feature-new-item:hover,
+.product-feature-item:hover{
+	background-color: #fff;
+}
+.product-feature-item-loading{
+	background:url('../../../statics/images/loading.gif') no-repeat 95% 50%;
+}
+.product-feature-item-selected{
+	background-color:#e0e0e0;
+}
+
+.product-feature-save{
+	height:40px;
+	line-height:40px;
+	width:100px;
+	position:absolute;
+	left:50%;
+	margin-left:-50px;
+	margin-top:10px;
+	background:#0af;
+	background:linear-gradient(0deg, #08b, #0af);
+}
+.product-feature-save:hover{
+	background: linear-gradient(0deg, #19c, #1bf);
+}
+
+.product-feature-remove{
+	height:40px;
+	line-height:40px;
+	width:40px;
+	position:absolute;
+	right:10px;
+	margin-top:10px;
+	font-family:'IconPackage';
+	background:#0af;
+	background:linear-gradient(0deg, #b33, #f44);
+}
+.product-feature-remove:hover{
+	background: linear-gradient(0deg, #c44, #f55);
+}

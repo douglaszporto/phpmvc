@@ -1,0 +1,53 @@
+#files-to-optimize{
+	margin-left:20px;
+}
+
+#files-to-optimize > div{
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	padding:0 10px;
+	float:left;
+	border:1px solid #dadada;
+	margin-right: -1px;
+}
+
+.css-redefinition-title{
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	margin-left:20px;
+}
+
+.css-redefinition-file{
+	color:#f00;
+}
+
+.css-redefinition-selector{
+	font-size:12px;
+	margin-left:40px;
+	margin-right:20px;
+	margin-bottom: 40px;
+}
+
+.css-redefinition-selector tr,
+.css-redefinition-selector td{
+	padding: 10px 0;
+}
+
+.css-redefinition-selector tr:hover{
+	background-color: #fff;
+}
+
+.css-redefinition-selector .cabec{
+	color: #000;
+	font-weight: bold;
+}
+
+.css-redefinition-selector .counter{
+	float:left;
+	width:30px;
+	text-align: right;
+	padding-right: 5px;
+	color:#999;
+}

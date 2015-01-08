@@ -1,0 +1,75 @@
+<div ng-controller="MainCtrl">
+	<div id="menu" ng-class="{'active':!$root.loginBox}">
+		<div id="menu-logo" ng-click="home()">
+			&nbsp;
+		</div>
+
+		<div class="menu-item" ng-repeat="item in menuItems" ng-click="action(item.module)">
+			<div class="menu-icon" ng-bind-html="item.icon | html">&nbsp;</div>
+			<div class="menu-name">{{item.label}}</div>
+			<div class="menu-label">{{item.desc}}</div>
+		</div>
+
+		<div class="menu-item" id="menu-sair" ng-click="logout()">
+			<div class="menu-icon">&#xe266;</div>
+			<div class="menu-name">Sair</div>
+			<div class="menu-label">Sair</div>
+		</div>
+	</div>
+
+	<div id="sub-content" template-link ng-class="{'active':!$root.loginBox}">
+		<div class="content-main">Conteúdo inicial do tools</div>
+	</div>
+
+	<div class="confirm-box-container" ng-class="{'no-display':!confirm.cssdisplay, 'hidden':!confirm.display}">
+		<div class="confirm-box-background" confirm-box-closer>&nbsp;</div>
+		<div class="confirm-box-box" ng-class="{'confirm-box-box-from-top':!confirm.display}">
+			<div class="confirm-box-title" ng-bind="confirm.title">&nbsp;</div>
+			<div class="confirm-box-message" ng-bind="confirm.message">&nbsp;</div>
+			<div class="confirm-box-button-place">
+				<button class="confirm-box-buttons" ng-repeat="btn in confirm.buttons" style="border-color:{{btn.color}}; color:{{btn.color}}" ng-disabled="!btn.enable" ng-bind="btn.label" ng-click="execAction(btn.action,$event)"></button>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-box-container" ng-class="{'no-display':!form.cssdisplay, 'hidden':!form.display}">
+		<div class="form-box-background" form-box-closer>&nbsp;</div>
+		<div class="form-box-box" ng-class="{'form-box-box-from-top':!form.display}">
+			<div class="form-box-title" ng-bind="form.title">&nbsp;</div>
+			<form class="form-box-content" data-rest-action="{{form.action}}">
+				<div class="form-box-tabs">
+					<div ng-repeat="t in form.content" ng-bind="t.tab" class="form-box-tab" ng-click="form.activeTab = t.tab" ng-class="{'form-box-tab-selected': form.activeTab === t.tab}">&nbsp;</div>
+					<br />
+				</div>
+				<div class="formbox-table-container">
+					<table class="form-box-table" ng-repeat="t in form.content" ng-class="{'form-box-table-invisible': t.tab !== form.activeTab}" width="100%">
+						<tr ng-repeat="field in t.content">
+							<td class="form-box-label" width="25%" ng-class="{'hasError': isFieldInvalid(field.name)}">
+								<span ng-bind="field.label">&nbsp;</span>
+								<span ng-if="field.required">*</span>
+							</td>
+							<td class="form-box-field" width="75%">
+								<input type="text" name="{{field.name}}" style="{{field.style}}" validation-method="{{field.validation}}" validation-return="form.validationError" ng-change="execInferenceValue(field.name)" ng-model="form.data[field.name]" value="{{field.value}}" ng-if="field.type === 0" />
+								<textarea name="{{field.name}}" style="{{field.style}}" ng-change="execInferenceValue(field.name)" ng-model="form.data[field.name]" ng-if="field.type === 4" >{{field.value}}</textarea>
+								<select name="{{field.name}}" style="{{field.style}}" ng-change="execInferenceValue(field.name)" ng-model="form.data[field.name]" ng-if="field.type === 1" ng-options="item.value as item.label for item in field.options track by item.value">
+									<option value="">&nbsp;</option>
+								</select>
+								<text-editor ng-model="form.data[field.name]" ng-if="field.type === 5" style="{{field.style}}" editor-operations="b,i,u,ol,ul,h2,h3,hr,img"></text-editor>
+								<file-uploader ng-model="form.data[field.name]" ng-if="field.type === 6" style="{{field.style}}"></file-uploader>
+							</td>
+						</tr>
+					</table>
+					<br />
+				</div>
+			</form>
+			<div class="form-box-button-place">
+				<button class="form-box-buttons" style="border-color:#000; color:#000" ng-click="submitForm()">Salvar</button>
+				<button class="form-box-buttons" style="border-color:#666; color:#666" form-box-closer>Cancelar</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="message-box" ng-class="{'message-box-show' : form.showMessage, 'message-box-error':(form.messageType==='E'), 'message-box-warning':(form.messageType==='W'), 'message-box-success':(form.messageType==='S'), 'message-box-loading':(form.messageType==='L')}">
+		{{form.message}}<img src="/statics/images/loading.gif" ng-if="showIconLoading()" style="vertical-align:middle;"/>
+	</div>
+</div>
