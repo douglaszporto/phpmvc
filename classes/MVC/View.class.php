@@ -15,12 +15,10 @@ require_once dirname(__FILE__) . '/../../config.php';
 
 
 /**
-* 
-*	Name:        View
-*	Description: Classe responsável pela camada de visualização do MVC
+*	Classe responsável pela camada de visualização do MVC
 *	
 *	Creation: 26/08/2014
-*	Author:   Douglas Zanotta
+*	@author: Douglas Zanotta
 *	
 */
 class View {
@@ -30,12 +28,10 @@ class View {
 
 
 	/**
-	* 
-	*	Name:        Construtor
-	*	Description: Construtor da classe. Instancia e configura o Smarty.
+	*	Construtor da classe. Instancia e configura o Smarty.
 	*	
 	*	Creation: 26/08/2014
-	*	Author:   Douglas Zanotta
+	*	@author: Douglas Zanotta
 	*	
 	*/	
 	public function __construct(){
@@ -52,12 +48,10 @@ class View {
 
 
 	/**
-	* 
-	*	Name:        Debug
-	*	Description: Habilita função de debug
+	*	Habilita função de debug
 	*	
 	*	Creation: 26/08/2014
-	*	Author:   Douglas Zanotta
+	*	@author: Douglas Zanotta
 	*	
 	*/
 	public function Debug(){
@@ -66,14 +60,12 @@ class View {
 	
 
 	/**
-	* 
-	*	Name:        Define
-	*	Description: Faz a ligação entre uma variável e um valor para a sustituição/processamento da view
+	*	Faz a ligação entre uma variável e um valor para a sustituição/processamento da view
 	*	
 	*	Creation: 26/08/2014
-	*	Author:   Douglas Zanotta
-	*	
-	*	@param  
+	*	@author: Douglas Zanotta
+	*	@param String $var Nome da variável a ser definida
+	*	@param Mixed $value Valor atribuído à variável
 	*/
 	public function Define($var,$value){
 		$this->smarty->assign($var,$value);
@@ -81,19 +73,12 @@ class View {
 
 
 	/**
-	* 
-	*	Name:        RenderFile
-	*	Description: Método que realiza o processamento da view. Caso a view não seja encontrada, 
-	*                retornará a view padrão de Erro 404
+	*	Método que realiza o processamento da view. Caso a view não seja encontrada, 
+	*   retornará a view padrão de Erro 404
 	*	
 	*	Creation: 26/08/2014
-	*	Author:   Douglas Zanotta
-	*	
-	*	@param  
-	*	@return 
-	*
-	*	Modifications:
-	*	
+	*	@author: Douglas Zanotta
+	*	@param String $file Nome do arquivo a ser renderizado
 	*/
 	public function RenderFile($file){
 		if($this->debugging)
@@ -104,7 +89,7 @@ class View {
 		$this->smarty->assign('request_path',trim($_SERVER["REQUEST_URI"],"/"));
 		$this->smarty->assign('siteProduction',SITE_PRODUCTION);
 
-
+		$this->smarty->loadFilter('output','trimwhitespace');
 
 		if(file_exists(VIEW_DIR.$file))
 			$this->smarty->display($file);
@@ -114,13 +99,12 @@ class View {
 
 
 	/**
-	* 
-	*	Name:        ReturnFile
-	*	Description: Método que realiza o processamento da view e RETORNA sua string processada.
+	*	Método que realiza o processamento da view e RETORNA sua string processada.
 	*	
 	*	Creation: 28/11/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*   @param String $file Caminho do arquivo a ser processado
+	*	@return String Conteúdo do arquivo (já processado)
 	*/
 	public function ReturnFile($file){
 		return $this->smarty->fetch($file);
@@ -128,14 +112,12 @@ class View {
 
 
 	/**
-	* 
-	*	Name:        Process
-	*	Description: Método que realiza o processamento da view e RETORNA sua string processada.
-	*                Caso a view não seja encontrada, retornará uma string vazia.
+	*	Método estático que realiza o processamento da view e RETORNA sua string processada.
+	*   Caso a view não seja encontrada, retornará uma string vazia.
 	*	
 	*	Creation: 28/11/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*	@return String Contúdo processado
 	*/
 	static public function Process($file,$context){
 		
@@ -159,19 +141,17 @@ class View {
 
 
 	/**
-	* 
-	*	Name:        Render
-	*	Description: Método estático para acesso rádipo à classe. Ele instancia a própria classe, 
-	*                faz as definições do contexto definido e renderiza o template.
-	*                Este método também é responsável por definir se a requisição é AJAX ou não.
-	*                Ele verifica se é uma requisição ajax e decide (de acordo por com o 2º parâmetro passado)
-	*                se será exibido ou não o contúdo do template.
+	*	Método estático para acesso rádipo à classe. Ele instancia a própria classe, 
+	*   faz as definições do contexto definido e renderiza o template.
+	*   Este método também é responsável por definir se a requisição é AJAX ou não.
+	*   Ele verifica se é uma requisição ajax e decide (de acordo por com o 2º parâmetro passado)
+	*   se será exibido ou não o contúdo do template.
 	*	
 	*	Creation: 26/08/2014
-	*	Author:   Douglas Zanotta
-	*	
-	*	@param  String $file, Mixed $context
-	*	
+	*	@author: Douglas Zanotta
+	*	@param String $file Caminho do arquivo a ser renderizado (relativo à pasta de views)
+	*	@param Contant $mode Modo de renderização (apenas requisição padrão [VIEW_RENDER_DEFAULT], apenas Ajax [VIEW_RENDER_AJAX], ambos [VIEW_RENDER_BOTH])
+	*   @param Array $context Array de mapeamento para substituições no processamento
 	*/
 	static public function Render($file, $mode = VIEW_RENDER_BOTH, $context=array()){
 
@@ -209,7 +189,9 @@ class View {
 
 
 
-
+/*
+*	@ignore
+*/
 function template_error_handler($severity, $message, $filename, $lineno) {
 	if (error_reporting() == 0)
 		return;

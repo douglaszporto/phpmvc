@@ -2,36 +2,46 @@
 
 namespace PHPMVC;
 
-require_once dirname(__FILE__) . "/DB.class.php";
 require_once dirname(__FILE__) . "/External/phpmailer/PHPMailerAutoload.php";
 
+/**
+* 
+*	Classe responsável por efetuar o disparo de emails.
+*	
+*	Creation: 27/02/2015
+*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+*/
 class Mail {
 
+	/**
+	* 
+	*	Método estático responsável por disparar os emails
+	*	
+	*	Creation: 27/02/2015
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@param String $fromEmail Email do remetente
+	*	@param String $fromName Nome do remetente
+	*	@param String $toEmail Email do destinatário
+	*	@param String $toName Nome do destinatário
+	*	@param String $subject Assunto do email
+	*	@param String $content Conteúdo do email
+	*	@param String $replyTo Responder para (email)
+	*	@param String $replyToName Responder para (nome)
+	*	@return True|String Se sucesso, retorna True. Se falha, retorna a string do erro.
+	*	
+	*/
+
 	static public function Send($fromEmail, $fromName, $toEmail, $toName, $subject, $content, $replyTo = "", $replyToName = ""){
-
-		$db = DB::getInstance();
-		$db->Query("
-			SELECT
-				strEnderecoServidorSMTP,
-				nPortaServidorSMTP,
-				strSenhaEmail
-			FROM
-				Mailer.dbo.CaixaPostal
-			WHERE 
-				strEnderecoEmail = '{$fromEmail}'
-		");
-		$email = $db->Fetch();
-
 
 		$mail = new \PHPMailer();
 		 
 		$mail->IsSMTP();
-		$mail->Host      = "smtp.nelogica.com.br";
+		$mail->Host      = "smtp.myserver.com.br";
 		$mail->SMTPAuth  = true;
 		$mail->SMTPDebug = false;
 		$mail->Port      = 587;
 		$mail->Username  = $fromEmail;
-		$mail->Password  = $email["strSenhaEmail"];
+		$mail->Password  = "1234";
 		$mail->From      = $fromEmail;
 		$mail->Sender    = $fromEmail;
 		$mail->FromName  = $fromName;

@@ -6,37 +6,52 @@ require_once dirname(__FILE__) . "/../config.php";
 require_once dirname(__FILE__) . "/Log.class.php";
 
 /**
-* 
-*	Name:        DB
-*	Description: Classe responsável por centralizar todas as operações de Banco de dados.
-*
-*                JAMAIS EFETUE QUALQUER OPERAÇÃO EM BANCO SEM UTILIZAR ESTA CLASSE
-*
-*                Bancos suportados atualmente:
-*                    --------------------------
-*                    | DBMS       | Driver    |
-*                    --------------------------
-*                    | SQL Server | sqlsrv    |
-*                    | SQL Server | mssql     |
-*                    | Postgres   | postgres  | <-- Não testado
-*                    | MySQL      | mysql,    | <-- Não testado
-*                    | MySQL PDO  | mysql_pdo | <-- Não testado
-*                    --------------------------
+*	Classe responsável por centralizar todas as operações de Banco de dados.*
+*	JAMAIS EFETUE QUALQUER OPERAÇÃO EM BANCO SEM UTILIZAR ESTA CLASSE
 *	
 *	Creation: 27/08/2014
-*	Author:   Douglas Zanotta
-*	
+*	@author: Douglas Zanotta
 */
-
 class DB{
 
+	/*
+	* @property String Tipo Inteiro dentro do SGBD utilizado
+	*/
 	static public $DBTYPE_INT      = 'INTEGER';
+
+	/*
+	* @property String Tipo String dentro do SGBD utilizado
+	*/
 	static public $DBTYPE_STRING   = 'VARCHAR(MAX)';
+
+	/*
+	* @property String Tipo Float dentro do SGBD utilizado
+	*/
 	static public $DBTYPE_FLOAT    = 'DECIMAL';
+
+	/*
+	* @property String Tipo Text dentro do SGBD utilizado
+	*/
 	static public $DBTYPE_TEXT     = 'VARCHAR(MAX)';
+
+	/*
+	* @property String Tipo Date dentro do SGBD utilizado
+	*/
 	static public $DBTYPE_DATE     = 'DATE';
+
+	/*
+	* @property String Tipo Datetime dentro do SGBD utilizado
+	*/
 	static public $DBTYPE_DATETIME = 'DATETIME';
+
+	/*
+	* @property String Tipo Boolean dentro do SGBD utilizado
+	*/
 	static public $DBTYPE_BOOLEAN  = 'BOOLEAN';
+
+	/*
+	* @property String Tipo Password dentro do SGBD utilizado
+	*/
 	static public $DBTYPE_PASSWORD = 'VARBINARY(MAX)';
 
 	static  $instance     = NULL;
@@ -50,13 +65,10 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        Construtor
-	*	Description: Contrutor da classe de conexão com o banco de dados.
+	*	Contrutor da classe de conexão com o banco de dados. A conexão com o banco é aberta neste método.
 	*	
 	*	Creation: 08/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
 	*/
 	public function __construct() {
 		try {
@@ -112,13 +124,11 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        getInstance
-	*	Description: Método que retorna a instancia ativa da classe. Utilizado para não abrir duas conexões numa mesma execução.
+	*	Método que retorna a instancia ativa da classe. Utilizado para não abrir duas conexões numa mesma execução.
 	*	
 	*	Creation: 08/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*	@return DB
 	*/
 	public static function getInstance() {	
 		if (self::$instance == NULL)
@@ -130,13 +140,10 @@ class DB{
 
 	
 	/**
-	* 
-	*	Name:        FreeResult
-	*	Description: Libera os recursos utilizados para a consulta
+	*	Libera os recursos utilizados para a consulta
 	*	
 	*	Creation: 08/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
 	*/		
 	public function freeResult() {
 		switch(DB_DRIVER) {
@@ -155,13 +162,11 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        Clean
-	*	Description: Método estático responsável por limpar o valor fornecido (Segurança contra SQL Injection)
+	*	Método estático responsável por limpar o valor fornecido (Segurança contra SQL Injection)
 	*	
 	*	Creation: 28/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*	@return String Dados sem carateres/palavras perigosas
 	*/
 	static public function Clean($val){
 
@@ -182,13 +187,12 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        Boolean
-	*	Description: Método estático responsável por transformar um booleano do PHP para um booleano do banco utilizado
+	*	Método estático responsável por transformar um booleano do PHP para um booleano do banco
 	*	
 	*	Creation: 18/09/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*	@param Boolean $val Valor a ser convertido
+	*	@return String Valor boolean em banco
 	*/
 	static public function Boolean($val){
 		switch(DB_DRIVER) {
@@ -206,13 +210,12 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        PasswordFormat
-	*	Description: Método estático responsável por retornar o formato utilizado para senhas.
+	*	Método estático responsável por retornar o formato utilizado para senhas.
 	*	
 	*	Creation: 29/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
+	*	@param String $v Monta a chamada de criptografia para senhas
+	*	@return String Campo convertido no formato de senha
 	*/
 	static public function PasswordFormat($v){
 		switch(DB_DRIVER) {
@@ -229,13 +232,11 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        CacheEnable
-	*	Description: Informa a classe que o uso de cache está ATIVADO/DASTIVADO para esta instancia
+	*	Informa a classe que o uso de cache está ATIVADO/DESTIVADO para esta instancia
 	*	
 	*	Creation: 03/12/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
+	*	@param Boolean $status Definição de Ativado/Desativado para o cache de banco de dados.
 	*/
 	public function CacheStatus($status) {
 		$this->performCache = ($status === true); // Dessa forma, garanto que SEMPRE será booleano
@@ -244,13 +245,11 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        InsertedId
-	*	Description: Obtem o valor do último id inserido.
+	*	Obtem o valor do último id inserido.
 	*	
 	*	Creation: 29/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
+	*	@return Integer|False Id do último registro inserido (ou false, caso falho) 
 	*/
 	public function InsertedId(){
 		switch(DB_DRIVER) {
@@ -277,13 +276,13 @@ class DB{
 					
 		
 	/**
-	* 
-	*	Name:        Query
-	*	Description: Método responsável por enviar a Query para execução.
+	*	Método responsável por enviar a Query para execução.
+	*   Caso haja erro na consulta, podemos ler o erro no arquivo logs/queries.log
 	*	
 	*	Creation: 08/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
+	*	@param String $sql SQL a ser executada
+	*	@return Boolean Excutado com sucesso (true|false)
 	*/
 	public function Query($sql) {
 		$this->cacheContent = null;
@@ -333,18 +332,16 @@ class DB{
 	}
 
 	/**
-	* 
-	*	Name:        Execute
-	*	Description: Método estático responsável por executar Stored Procedures (Não trata Sotred Procedures com retorno).
-	*                Este método recebe parâmetros variáveis. O primeiro parâmetro deve ser o nome da SP executada.
-	*                Os parâmetros subsequentes serão enviados para a chamada da SP.
+	*	Método estático responsável por executar Stored Procedures (Não trata Sotred Procedures com retorno).
+	*   Este método recebe parâmetros variáveis. O primeiro parâmetro deve ser o nome da SP executada.
+	*   Os parâmetros subsequentes serão enviados para a chamada da SP.
 	*                
-	*                Por exemplo, se quisermos executar "EXECUTE banco.dbo.minhaStoredProcedure 1,2,3", 
-	*                chamaremos DB::Execute('banco.dbo.minhaStoredProcedure',1,2,3);
+	*   Por exemplo, se quisermos executar "EXECUTE banco.dbo.minhaStoredProcedure 1,2,3", 
+	*   chamaremos DB::Execute('banco.dbo.minhaStoredProcedure',1,2,3);
 	*	
 	*	Creation: 27/11/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*	@return Boolean Excutado com sucesso (true|false)
 	*/
 	static public function Execute(){
 		$args = func_get_args();
@@ -362,13 +359,12 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        QuerySelect
-	*	Description: Método responsável por enviar uma Query de SELECT para execução.
+	*	Método responsável por enviar uma Query de SELECT para execução.
 	*	
 	*	Creation: 28/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*	@param Array $sqlParts Array com as partes da consulta para composição
+	*	@return Boolean Resultado da execução do SELECT
 	*/
 	public function QuerySelect($sqlParts) {
 
@@ -439,13 +435,13 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        QueryInsert
-	*	Description: Método responsável por enviar uma Query de INSERT para execução.
+	*	Método responsável por enviar uma Query de INSERT para execução.
 	*	
 	*	Creation: 28/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
+	*	@param String $table Nome da tabela onde os dados serão inseridos
+	*	@param Array $fieldList Mapeamento dos campos e dos valores a serem inseridos
+	*	@return Boolean Resultado da execução do INSERT
 	*/
 	public function QueryInsert($table, $fieldsList) {
 
@@ -479,13 +475,14 @@ class DB{
 	}
 
 	/**
-	* 
-	*	Name:        QueryUpdate
-	*	Description: Método responsável por enviar uma Query de UPDATE para execução.
+	*	Método responsável por enviar uma Query de UPDATE para execução.
 	*	
 	*	Creation: 28/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*	@param String $table Tabela onde os dados serão atualizados
+	*	@param Array $fieldList Mapeamento entre os campos que serão atualizados e seu novo valor
+	*	@param String $filter String do WHERE para filtro do update
+	*	@return Boolean Resultado da execução do UPDATE
 	*/
 	public function QueryUpdate($table, $fieldsList, $filter) {
 
@@ -506,13 +503,13 @@ class DB{
 	}
 
 	/**
-	* 
-	*	Name:        QueryDelete
-	*	Description: Método responsável por enviar uma Query de DELETE para execução.
+	*	Método responsável por enviar uma Query de DELETE para execução.
 	*	
 	*	Creation: 28/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author Douglas Zanotta
+	*	@param String $table Tabela onde os dados serão removidos
+	*	@param String $filter String do WHERE para filtro do delete
+	*	@return Boolean Resultado da execução do DELETE
 	*/
 	public function QueryDelete($table, $filter) {
 
@@ -529,13 +526,11 @@ class DB{
 
 		 
 	/**
-	* 
-	*	Name:        NumRows
 	*	Description: Método que retorna o número de linhas da última consulta.
 	*	
 	*	Creation: 08/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
+	*	@return Integer Número de registro obtidos na última consulta
 	*/
 	public function NumRows() {
 		switch(DB_DRIVER) {
@@ -554,13 +549,12 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        Fetch
-	*	Description: Puxa os dados do cache (já em memória) ou executa o FetchData, caso não haja cache.
+	*	Puxa os dados do cache (já em memória) ou executa o FetchData, caso não haja cache.
 	*	
 	*	Creation: 08/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
+	*	@param String $type Tipo do retorno esperado (Object ou Array)
+	*	@return Object|Array Dados retornados pelo banco de dados na última consulta (ou em cache)
 	*/
 	public function Fetch($type = 'assoc') {
 		if($this->cacheContent === null)
@@ -575,13 +569,13 @@ class DB{
 	
 		
 	/**
-	* 
-	*	Name:        FetchData
-	*	Description: Executa fetch_object, fetch_assoc ou fetch_array de acordo com o driver.
+	*	Executa fetch_object, fetch_assoc ou fetch_array de acordo com o driver.
+	*	Executado quando não há cache para a consulta em questão.
 	*	
 	*	Creation: 08/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
+	*	@param String $type Tipo de associação realizada (assoc, object, numeric)
+	*	@return Object|Array Dados obtidos na última consulta ao banco de dados
 	*/
 	public function FetchData($type = 'assoc') {
 		switch(DB_DRIVER) {
@@ -656,16 +650,17 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        GetValues
-	*	Description: Método estático que retorna um array to tipo array("value","label") com os dados da tabela selecionada.
-	*                Este método é utilizado para montagem de <select>s e <option>s no painel de adminstração.
+	*	Método estático que retorna um array to tipo array("value","label") com os dados da tabela selecionada.
+	*   Este método é utilizado para montagem de <select>s e <option>s no painel de adminstração.
 	*	
 	*	Creation: 13/11/2014
-	*	Author:   Douglas Zanotta
-	*	
-	*	@param  table, fieldVal, fieldDesc, where, order
-	*	@return array
+	*	@author: Douglas Zanotta
+	*	@param String $table Nome da tabela a ser consultada
+	*	@param String $fieldVal Nome do campo que fornecerá a chave no retorno
+	*	@param String $fieldDesc Nome do campo que fornecerá o valor no retorno
+	*	@param String $where Filtro que será aplicado para retorno dos dados (não obrigatório)
+	*	@param String $order Cláusula adicionada ao ORDER BY da query (não obrigatório)
+	*	@return Array Arary Chave => Valor com todos os registros retornados.
 	*
 	*/
 	static public function GetValues($table, $fieldVal, $fieldDesc, $where = "", $order = "") {
@@ -700,13 +695,10 @@ class DB{
 	
 
 	/**
-	* 
-	*    Name:        BeginTransaction
-	*    Description: Inicia uma transação
+	*	Inicia uma transação
 	*    
-	*    Creation: 14/07/2014
-	*    Author:   Douglas Zanotta
-	*    
+	*	Creation: 14/07/2014
+	*	@author: Douglas Zanotta
 	*/
 	public function BeginTransaction() {
 		$log = fopen(dirname(__FILE__) . "/../logs/queries.log", 'a');
@@ -732,13 +724,10 @@ class DB{
 	}
 
 	/**
-	* 
-	*    Name:        CommitTransaction
-	*    Description: Finaliza a transação, salvando os dados no banco de dados
+	*	Finaliza a transação, salvando os dados no banco de dados
 	*    
-	*    Creation: 14/07/2014
-	*    Author:   Douglas Zanotta
-	*    
+	*	Creation: 14/07/2014
+	*	@author: Douglas Zanotta
 	*/
 	public function CommitTransaction() {
 		$log = fopen(dirname(__FILE__) . "/../logs/queries.log", 'a');
@@ -764,13 +753,10 @@ class DB{
 	}
 
 	/**
-	* 
-	*    Name:        RollbackTransaction
-	*    Description: Finaliza a transação, salvando os dados no banco de dados
+	*	Finaliza a transação, salvando os dados no banco de dados
 	*    
-	*    Creation: 14/07/2014
-	*    Author:   Douglas Zanotta
-	*    
+	*	Creation: 14/07/2014
+	*	@author: Douglas Zanotta
 	*/
 	public function RollbackTransaction() {
 		$log = fopen(dirname(__FILE__) . "/../logs/queries.log", 'a');
@@ -798,13 +784,10 @@ class DB{
 
 
 	/**
-	* 
-	*	Name:        Destrutor
-	*	Description: Método responsável pela remoçao do objeto.
+	*	Método responsável pela remoçao do objeto.
 	*	
 	*	Creation: 08/08/2014
-	*	Author:   Douglas Zanotta
-	*	
+	*	@author: Douglas Zanotta
 	*/
 	
 	function __destruct() {

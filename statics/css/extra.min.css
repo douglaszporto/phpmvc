@@ -1,1 +1,0 @@
-@media all and(max-width:599px){.largeres,.mediumres,.not-smallres{display:none;}}@media all and(min-width:600px)and(max-width:999px){.largeres,.smallres,.not-mediumres{display:none;}}@media all and(min-width:1000px){.mediumres,.smallres,.not-largeres{display:none;}}

@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Tratamento do favicon na pasta raiz
+RewriteCond %{REQUEST_URI} ^(/?)favicon.ico(.*)$
+RewriteRule ^(.*)$ /statics/images/favicon.ico [R=301,L]
+
+# Tratamento do urls.php
+RewriteCond %{REQUEST_URI} ^(?!(?:statics|docs|sitemap\.xml))(.*?)$ [NC]
+RewriteCond %{QUERY_STRING} ^(.*)$
+RewriteRule ^(?!(?:statics|docs|sitemap\.xml))(.*?)$ urls.php?url=$1 [QSA,L,NC]

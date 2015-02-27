@@ -1,0 +1,22 @@
+{
+  "name": "site_rebuild",
+  "version": "1.0.0",
+  "description": "Site Nelogica",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://nelogica@nelogica.com.br/~/repo/site.git"
+  },
+  "author": "Desenvolvimento Web",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.3",
+    "gulp-minify-css": "^0.3.12",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.2"
+  }
+}

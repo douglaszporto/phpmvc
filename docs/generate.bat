@@ -1,0 +1,1 @@
+php phpDocumentor.phar -d ../ -t . --ignore "classes/External/*,classes/MVC/Smarty/*,controllers/*,models/*"

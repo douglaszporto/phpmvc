@@ -1,6 +1,0 @@
-<form ng-controller="LoginCtrl" id="login-container" name="formLogin" ng-class="{'active':$root.loginBox}">
-	<img src="statics/images/logo.png" alt="Logo" title="Logo" id="login-logo"/>
-	<label for="input-user">Login</label><input id="input-user" type="text" ng-model="credentials.user" required="required" />
-	<label for="input-pass">Senha</label><input id="input-pass" type="password" ng-model="credentials.pass" required="required" />
-	<button ng-click="login()" ng-disabled="formLogin.$invalid">Logar {{$root.loginBox}}</button>
-</form>

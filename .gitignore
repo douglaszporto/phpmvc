@@ -1,0 +1,5 @@
+logs
+cache/*
+classes/MVC/Smarty/compiled
+classes/MVC/Smarty/cache
+node_modules
