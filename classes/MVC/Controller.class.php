@@ -1,4 +1,8 @@
 <?php
+/**
+ *	Classe Controller
+ *	@since 1.0rc
+ */
 
 namespace PHPMVC;
 

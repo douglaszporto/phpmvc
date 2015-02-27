@@ -1,11 +1,14 @@
 <?php
+/**
+ *	Classe Mail
+ *	@since 1.0rc
+ */
 
 namespace PHPMVC;
 
 require_once dirname(__FILE__) . "/External/phpmailer/PHPMailerAutoload.php";
 
 /**
-* 
 *	Classe responsável por efetuar o disparo de emails.
 *	
 *	Creation: 27/02/2015

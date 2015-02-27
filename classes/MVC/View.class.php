@@ -1,4 +1,8 @@
 <?php
+/**
+ *	Classe View
+ *	@since 1.0rc
+ */
 
 namespace PHPMVC;
 
@@ -23,7 +27,9 @@ require_once dirname(__FILE__) . '/../../config.php';
 */
 class View {
 
+	/** Instancie do objeto Smarty */
 	private $smarty    = null;
+	/** Estado de debug */
 	private $debugging = false;
 
 
@@ -99,12 +105,13 @@ class View {
 
 
 	/**
-	*	Método que realiza o processamento da view e RETORNA sua string processada.
-	*	
+	*	Método que realiza o processamento da view e RETORNA sua string processada
 	*	Creation: 28/11/2014
+	*
+	*
 	*	@author Douglas Zanotta
-	*   @param String $file Caminho do arquivo a ser processado
-	*	@return String Conteúdo do arquivo (já processado)
+	*	@param String $file Caminho do arquivo a ser processado.
+	*	@return String Conteúdo do arquivo (já processado).
 	*/
 	public function ReturnFile($file){
 		return $this->smarty->fetch($file);
@@ -112,11 +119,13 @@ class View {
 
 
 	/**
-	*	Método estático que realiza o processamento da view e RETORNA sua string processada.
-	*   Caso a view não seja encontrada, retornará uma string vazia.
+	*	Método estático que realiza o processamento da view e RETORNA sua string processada
+	*   Caso a view não seja encontrada, retornará uma string vazia
 	*	
 	*	Creation: 28/11/2014
 	*	@author Douglas Zanotta
+	*	@param String $file Caminho do arquivo a ser processado
+	*	@param String $context Mapeamento de substituições a serem processadas
 	*	@return String Contúdo processado
 	*/
 	static public function Process($file,$context){
@@ -151,7 +160,7 @@ class View {
 	*	@author: Douglas Zanotta
 	*	@param String $file Caminho do arquivo a ser renderizado (relativo à pasta de views)
 	*	@param Contant $mode Modo de renderização (apenas requisição padrão [VIEW_RENDER_DEFAULT], apenas Ajax [VIEW_RENDER_AJAX], ambos [VIEW_RENDER_BOTH])
-	*   @param Array $context Array de mapeamento para substituições no processamento
+	*	@param Array $context Array de mapeamento para substituições no processamento
 	*/
 	static public function Render($file, $mode = VIEW_RENDER_BOTH, $context=array()){
 
@@ -189,7 +198,7 @@ class View {
 
 
 
-/*
+/**
 *	@ignore
 */
 function template_error_handler($severity, $message, $filename, $lineno) {

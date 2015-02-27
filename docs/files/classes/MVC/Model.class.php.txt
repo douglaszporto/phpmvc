@@ -1,4 +1,9 @@
 <?php
+/**
+ *	Classe FieldModel
+ *	Classe Model
+ *	@since 1.0rc
+ */
 
 namespace PHPMVC;
 

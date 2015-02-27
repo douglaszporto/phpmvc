@@ -114,12 +114,12 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">59</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
                                 </a>
                             </li>
                             <li>
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-179952130"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1995119609"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-179952130" class="accordion-body collapse in">
+            <div id="namespace-1995119609" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1438049482"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1802948880"></a>
                                 <a href="../namespaces/PHPMVC.html" style="margin-left: 30px; padding-left: 0">PHPMVC</a>
             </div>
-            <div id="namespace-1438049482" class="accordion-body collapse ">
+            <div id="namespace-1802948880" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -259,7 +259,7 @@
                     
                     <dl>
                         <dt>File</dt>
-                            <dd><a href="../files/classes.MVC.View.class.html"><div class="path-wrapper">classes\MVC\View.class.php</div></a></dd>
+                            <dd><a href="../files/MVC.View.class.html"><div class="path-wrapper">MVC\View.class.php</div></a></dd>
                                                 <dt>Package</dt>
                             <dd><div class="namespace-wrapper">Default</div></dd>
                                                 <dt>Class hierarchy</dt>
@@ -301,7 +301,7 @@
             <article class="property">
                 <h3 class="private ">$smarty</h3>
                 <pre class="signature">$smarty : </pre>
-                <p><em></em></p>
+                <p><em>Instancie do objeto Smarty</em></p>
                 
 
                                 <h4>Type</h4>
@@ -325,7 +325,7 @@
             <article class="property">
                 <h3 class="private ">$debugging</h3>
                 <pre class="signature">$debugging : </pre>
-                <p><em></em></p>
+                <p><em>Estado de debug</em></p>
                 
 
                                 <h4>Type</h4>
@@ -510,23 +510,24 @@
             <article class="method">
                 <h3 class="public ">ReturnFile()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">ReturnFile(  <span class="argument">$file</span>) : String</pre>
-                <p><em>Método que realiza o processamento da view e RETORNA sua string processada.</em></p>
-                <p>Creation: 28/11/2014</p>
+                <pre class="signature" style="margin-right: 54px;">ReturnFile(String  <span class="argument">$file</span>) : String</pre>
+                <p><em>Método que realiza o processamento da view e RETORNA sua string processada
+Creation: 28/11/2014</em></p>
+                
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$file </td>
-                                <td></td>
+                                <td><p>Caminho do arquivo a ser processado.</p></td>
                             </tr>
                                             </table>
                 
                 
                                     <h4>Returns</h4>
                     String
-                                            &mdash; <p>Conteúdo do arquivo (já processado)</p>
+                                            &mdash; <p>Conteúdo do arquivo (já processado).</p>
                                     				
                             </article>
         </div>
@@ -541,8 +542,7 @@
                             author
                         </th>
                         <td>
-                                                                                            <p>Douglas Zanotta
-@param String $file Caminho do arquivo a ser processado</p>
+                                                                                            <p>Douglas Zanotta</p>
                                                     </td>
                     </tr>
                             </table>
@@ -555,22 +555,22 @@
             <article class="method">
                 <h3 class="public ">Process()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Process(  <span class="argument">$file</span>,   <span class="argument">$context</span>) : String</pre>
-                <p><em>Método estático que realiza o processamento da view e RETORNA sua string processada.</em></p>
-                <p>Caso a view não seja encontrada, retornará uma string vazia.</p>
-<p>Creation: 28/11/2014</p>
+                <pre class="signature" style="margin-right: 54px;">Process(String  <span class="argument">$file</span>, String  <span class="argument">$context</span>) : String</pre>
+                <p><em>Método estático que realiza o processamento da view e RETORNA sua string processada
+  Caso a view não seja encontrada, retornará uma string vazia</em></p>
+                <p>Creation: 28/11/2014</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$file </td>
-                                <td></td>
+                                <td><p>Caminho do arquivo a ser processado</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$context </td>
-                                <td></td>
+                                <td><p>Mapeamento de substituições a serem processadas</p></td>
                             </tr>
                                             </table>
                 
@@ -606,7 +606,7 @@
             <article class="method">
                 <h3 class="public ">Render()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Render(String  <span class="argument">$file</span>, \PHPMVC\Contant  <span class="argument">$mode = VIEW_RENDER_BOTH</span>,   <span class="argument">$context = array()</span>) </pre>
+                <pre class="signature" style="margin-right: 54px;">Render(String  <span class="argument">$file</span>, \PHPMVC\Contant  <span class="argument">$mode = VIEW_RENDER_BOTH</span>, Array  <span class="argument">$context = array()</span>) </pre>
                 <p><em>Método estático para acesso rádipo à classe. Ele instancia a própria classe,
   faz as definições do contexto definido e renderiza o template.</em></p>
                 <p>Este método também é responsável por definir se a requisição é AJAX ou não.
@@ -624,13 +624,12 @@ se será exibido ou não o contúdo do template.</p>
                                                     <tr>
                                 <td>\PHPMVC\Contant</td>
                                 <td>$mode </td>
-                                <td><p>Modo de renderização (apenas requisição padrão [VIEW_RENDER_DEFAULT], apenas Ajax [VIEW_RENDER_AJAX], ambos [VIEW_RENDER_BOTH])
-@param Array $context Array de mapeamento para substituições no processamento</p></td>
+                                <td><p>Modo de renderização (apenas requisição padrão [VIEW_RENDER_DEFAULT], apenas Ajax [VIEW_RENDER_AJAX], ambos [VIEW_RENDER_BOTH])</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>Array</td>
                                 <td>$context </td>
-                                <td></td>
+                                <td><p>Array de mapeamento para substituições no processamento</p></td>
                             </tr>
                                             </table>
                 
@@ -666,7 +665,7 @@ se será exibido ou não o contúdo do template.</p>
             <h3 id="source-view-label">View.class.php</h3>
         </div>
         <div class="modal-body">
-            <pre data-src="../files/classes\MVC\View.class.php.txt" class="language-php line-numbers"></pre>
+            <pre data-src="../files/MVC\View.class.php.txt" class="language-php line-numbers"></pre>
         </div>
     </div>
 
@@ -707,7 +706,7 @@ se será exibido ou não o contúdo do template.</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on February 27th, 2015 at 16:32.
+                    on February 27th, 2015 at 17:45.
                 </section>
             </section>
         </section>

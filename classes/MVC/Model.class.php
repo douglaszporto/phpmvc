@@ -1,4 +1,9 @@
 <?php
+/**
+ *	Classe FieldModel
+ *	Classe Model
+ *	@since 1.0rc
+ */
 
 namespace PHPMVC;
 
@@ -13,9 +18,16 @@ namespace PHPMVC;
 */
 class FieldModel {
 
+	/** Nome do campo */
 	private $name      = "";
+
+	/** Campo permite nulo? */
 	private $allowNull = true;
+
+	/** Valor atual do campo */
 	private $value     = "";
+
+	/** Tipo do campo */
 	public  $type      = "";
 
 	/**
@@ -24,7 +36,8 @@ class FieldModel {
 	*	
 	*	Creation: 01/09/2014
 	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
-	*	
+	*	@param String $n Nome do campo
+	*	@param String $t Tipo do campo
 	*/
 	public function __construct($n,$t) {
 		$this->name = $n;
@@ -164,44 +177,26 @@ class FieldModel {
 */
 class Model {
 
-	/*
-	* @property String Tabela referenciada pela model
-	*/
+	/** Tabela referenciada pela model */
 	protected $table         = "";
-	/*
-	* @property String Chave Primária da tabela referenciada
-	*/
+	/** Chave Primária da tabela referenciada */
 	protected $primaryKey    = "";
-	/*
-	* @property Boolean Estado de ativação do cache
-	*/
+	/** Estado de ativação do cache */
 	protected $cacheEnable   = true;
-	/*
-	* @property Array Campos (class FieldModel) utilizados por esta model
-	*/
+	/** Campos (class FieldModel) utilizados por esta model */
 	private   $fields        = array();
-	/*
-	* @property Array Campos que tiveram seus valores alterados
-	*/
+	/** Campos que tiveram seus valores alterados */
 	private   $fieldsChanged = array();
-	/*
-	* @property Array Partes que compões uma SQL que será constrída
-	*/
+	/** Partes que compões uma SQL que será constrída */
 	private   $sqlParts      = array();
-	/*
-	* @property Array Dados reais obtidos pela consulta
-	*/
+	/** Dados reais obtidos pela consulta */
 	private   $data          = array();
-	/*
-	* @property Integer Indice interno para obtenção dos dados
-	*/
+	/** Indice interno para obtenção dos dados */
 	private   $pointer       = NULL;
-	/*
-	* @property Boolean Estado de erro encontrado
-	*/
+	/** Estado de erro encontrado */
 	private   $hasError      = false;
 
-	/*
+	/**
 	* @ignore
 	* Inicializa as variáveis internas
 	*/
@@ -682,8 +677,8 @@ class Model {
 	*	
 	*	Creation: 01/09/2014
 	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@param Integer $i Indice do registro desejado
 	*	@return Array|False Dados do $i-ésimo registro (ou false, caso não haja registros)
-	*	
 	*/
 	public function Index($i) {
 		if(empty($this->data))
@@ -701,8 +696,9 @@ class Model {
 	*	
 	*	Creation: 01/09/2014
 	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@param String $field Nome do campo que será buscado
+	*	@param Mixed $val Valor desejado para o campo informado
 	*	@return Array Dados do registro (ou array vazio)
-	*	
 	*/
 	public function ByFieldValue($field, $val){
 		if(empty($this->data))

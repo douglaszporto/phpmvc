@@ -11,6 +11,7 @@ use PHPMVC\URL  as URL;
 use PHPMVC\View as View;
 use PHPMVC\Log  as Log;
 
+/** Instancia a classe URL para tratamento da URL */
 $url = new URL($_GET["url"]);
 
 $url->url('^(home|index)?$','Home.Index');

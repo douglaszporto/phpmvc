@@ -1,4 +1,8 @@
 <?php 
+/**
+ *	Classe DB
+ *	@since 1.0rc
+ */
 
 namespace PHPMVC;
 

@@ -1,4 +1,8 @@
 <?php
+/**
+ *	Arquivo responsável por receber todas as requisições e direcioná-las para os controllers responsáveis
+ *	@since 1.0rc
+ */
 
 require_once dirname(__FILE__) . "/classes/DB.class.php";
 require_once dirname(__FILE__) . "/classes/Log.class.php";
@@ -11,6 +15,7 @@ use PHPMVC\URL  as URL;
 use PHPMVC\View as View;
 use PHPMVC\Log  as Log;
 
+/** Instancia a classe URL para tratamento da URL */
 $url = new URL($_GET["url"]);
 
 $url->url('^(home|index)?$','Home.Index');

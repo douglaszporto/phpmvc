@@ -1,16 +1,16 @@
 {
   "name": "site_rebuild",
-  "version": "1.0.0",
-  "description": "Site Nelogica",
+  "version": "1.0rc",
+  "description": "PHP MVC",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://nelogica@nelogica.com.br/~/repo/site.git"
+    "url": "https://github.com/douglaszporto/phpmvc.git"
   },
-  "author": "Desenvolvimento Web",
+  "author": "Douglas Zanotta",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.8.10",

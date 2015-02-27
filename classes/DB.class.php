@@ -1,4 +1,8 @@
 <?php 
+/**
+ *	Classe DB
+ *	@since 1.0rc
+ */
 
 namespace PHPMVC;
 
@@ -14,53 +18,51 @@ require_once dirname(__FILE__) . "/Log.class.php";
 */
 class DB{
 
-	/*
-	* @property String Tipo Inteiro dentro do SGBD utilizado
+	/**
+	* Tipo Inteiro dentro do SGBD utilizado
 	*/
 	static public $DBTYPE_INT      = 'INTEGER';
 
-	/*
-	* @property String Tipo String dentro do SGBD utilizado
-	*/
+	/** Tipo String dentro do SGBD utilizado */
 	static public $DBTYPE_STRING   = 'VARCHAR(MAX)';
 
-	/*
-	* @property String Tipo Float dentro do SGBD utilizado
-	*/
+	/** Tipo Float dentro do SGBD utilizado */
 	static public $DBTYPE_FLOAT    = 'DECIMAL';
 
-	/*
-	* @property String Tipo Text dentro do SGBD utilizado
-	*/
+	/** Tipo Text dentro do SGBD utilizado */
 	static public $DBTYPE_TEXT     = 'VARCHAR(MAX)';
 
-	/*
-	* @property String Tipo Date dentro do SGBD utilizado
-	*/
+	/** Tipo Date dentro do SGBD utilizado */
 	static public $DBTYPE_DATE     = 'DATE';
 
-	/*
-	* @property String Tipo Datetime dentro do SGBD utilizado
-	*/
+	/** Tipo Datetime dentro do SGBD utilizado */
 	static public $DBTYPE_DATETIME = 'DATETIME';
 
-	/*
-	* @property String Tipo Boolean dentro do SGBD utilizado
-	*/
+	/** Tipo Boolean dentro do SGBD utilizado */
 	static public $DBTYPE_BOOLEAN  = 'BOOLEAN';
 
-	/*
-	* @property String Tipo Password dentro do SGBD utilizado
-	*/
+	/** Tipo Password dentro do SGBD utilizado */
 	static public $DBTYPE_PASSWORD = 'VARBINARY(MAX)';
 
+	/** Instancia estática do objeto DB */
 	static  $instance     = NULL;
 
+	/** @ignore */
 	private $connection   = NULL;
+	
+	/** @ignore */
 	private $result       = NULL;
+	
+	/** @ignore */
 	private $errors       = array();
+	
+	/** @ignore */
 	private $cacheContent = null;
+
+	/** @ignore */
 	private $cachePointer = 0;
+
+	/** @ignore */
 	private $performCache = true;
 
 
@@ -166,6 +168,7 @@ class DB{
 	*	
 	*	Creation: 28/08/2014
 	*	@author Douglas Zanotta
+	*	@param String $val Dados a serem limpos
 	*	@return String Dados sem carateres/palavras perigosas
 	*/
 	static public function Clean($val){

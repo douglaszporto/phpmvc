@@ -1,4 +1,8 @@
 <?php
+/**
+ *	Classe URL
+ *	@since 1.0rc
+ */
 
 namespace PHPMVC;
 
@@ -11,12 +15,14 @@ namespace PHPMVC;
 */
 class URL {
 
+	/** URL fornecida para a classe */
 	private $url;
+	/** URL completa, incluíndo o domínio do site */
 	private $urlfull;
 
-	/*
-	*	@ignore
-	*	Inicialização da classe.
+	/** 
+	*	Inicialização da classe. 
+	*	@param String $url URL que será comparada com a expressão regular
 	*/
 	public function __construct($url) {
 		$this->url     = preg_replace('~(^[\\/\s]*|[\\/\s]*$)~i', "", $url);

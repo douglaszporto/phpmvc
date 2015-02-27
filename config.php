@@ -1,29 +1,15 @@
 <?php
-/*
- * Este arquivo contém as constantes definidas para o PHPMVC
- */
 
-
-
-
-/*
-* @ignore
-*/
-define('SITE_VERSION'   , '20150107');
-
-/*
- * Domínio raiz do site. Será substituidor de {{$domain}} nos templates.
- */
-define('SITE_DOMAIN'    , '//localhost:8082/phpmvc');
-
-/*
- * Nome do site
- */
+/** Nome do site */
 define('SITE_NAME'      , 'PHPMVC Doc');
 
-/*
- * Flag que indica se o código deve ser tratado como "Em produção" ou "Em desenvolvimento".
- */
+/** Versãa atual do site. Troque este valor para forçar atualização no cache */
+define('SITE_VERSION'   , '20150107');
+
+/** Domínio raiz do site. Será substituidor de {{$domain}} nos templates.*/
+define('SITE_DOMAIN'    , '//localhost:8082/phpmvc');
+
+/* Flag que indica se o código deve ser tratado como "Em produção" ou "Em desenvolvimento" */
 define('SITE_PRODUCTION', false);
 
 
@@ -34,34 +20,22 @@ define('SITE_PRODUCTION', false);
 	DATABASE CONNECTION PARAMS
 */
 
-/*
- * Endereço de conexão com o banco de dados.
- */
+/** Endereço de conexão com o banco de dados. */
 define('DB_HOST'     , '127.0.0.1');
 
-/*
- * Usuário para conexão com o banco
- */
+/** Usuário para conexão com o banco */
 define('DB_USER'     , 'root'     );
 
-/*
- * Senha do usuário para conexão com o banco
- */
+/** Senha do usuário para conexão com o banco */
 define('DB_PASS'     , '102030'   );
 
-/*
- * Banco padrão da conexão
- */
+/** Banco padrão da conexão */
 define('DB_DATABASE' , 'mydb'     );
 
-/*
- * Driver para a conexão: Valores disponíveis: mysql, postgres, mssql, sqlsrv, mysql_pdo
- */
+/** Driver para a conexão: Valores disponíveis: mysql, postgres, mssql, sqlsrv, mysql_pdo */
 define('DB_DRIVER'   , 'mysql'    );
 
-/*
- * Codificação padrão do bando de dados
- */
+/** Codificação padrão do bando de dados */
 define('DB_CHARSET'  , 'UTF-8'    );
 
 
@@ -71,19 +45,13 @@ define('DB_CHARSET'  , 'UTF-8'    );
 	PATH DEFINITIONS
 */
 
-/*
- * Diretório raiz do projeto
- */
+/** Diretório raiz do projeto */
 define('PATH_DIR'        , dirname(__FILE__)."/");
 
-/*
- * Diretório padrão das Models
- */
+/** Diretório padrão das Models */
 define('PATH_MODELS'     , dirname(__FILE__)."/models/");
 
-/*
- * Diretório padrão dos Controllers
- */
+/** Diretório padrão dos Controllers */
 define('PATH_CONTROLLERS', dirname(__FILE__)."/controllers/");
 
 
