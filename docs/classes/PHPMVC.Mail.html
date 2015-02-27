@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">110</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">59</span>
                                 </a>
                             </li>
                             <li>
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1213603162"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1445779414"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1213603162" class="accordion-body collapse in">
+            <div id="namespace-1445779414" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1355035617"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-964059603"></a>
                                 <a href="../namespaces/PHPMVC.html" style="margin-left: 30px; padding-left: 0">PHPMVC</a>
             </div>
-            <div id="namespace-1355035617" class="accordion-body collapse ">
+            <div id="namespace-964059603" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -195,8 +195,8 @@
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
                     <h1><small>\PHPMVC</small>Mail</h1>
-                    <p><em></em></p>
-                    
+                    <p><em>Classe responsável por efetuar o disparo de emails.</em></p>
+                    <p>Creation: 27/02/2015</p>
                     
                                         
                     <section id="summary">
@@ -267,7 +267,14 @@
                                                                         </dl>
                     <h2>Tags</h2>
                     <table class="table table-condensed">
-                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                            </td>
+                        </tr>
                                         </table>
                 </aside>
             </div>
@@ -286,56 +293,59 @@
             <article class="method">
                 <h3 class="public ">Send()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Send(  <span class="argument">$fromEmail</span>,   <span class="argument">$fromName</span>,   <span class="argument">$toEmail</span>,   <span class="argument">$toName</span>,   <span class="argument">$subject</span>,   <span class="argument">$content</span>,   <span class="argument">$replyTo = &quot;&quot;</span>,   <span class="argument">$replyToName = &quot;&quot;</span>) </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">Send(String  <span class="argument">$fromEmail</span>, String  <span class="argument">$fromName</span>, String  <span class="argument">$toEmail</span>, String  <span class="argument">$toName</span>, String  <span class="argument">$subject</span>, String  <span class="argument">$content</span>, String  <span class="argument">$replyTo = &quot;&quot;</span>, String  <span class="argument">$replyToName = &quot;&quot;</span>) : True|String</pre>
+                <p><em>Método estático responsável por disparar os emails</em></p>
+                <p>Creation: 27/02/2015</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$fromEmail </td>
-                                <td></td>
+                                <td><p>Email do remetente</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$fromName </td>
-                                <td></td>
+                                <td><p>Nome do remetente</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$toEmail </td>
-                                <td></td>
+                                <td><p>Email do destinatário</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$toName </td>
-                                <td></td>
+                                <td><p>Nome do destinatário</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$subject </td>
-                                <td></td>
+                                <td><p>Assunto do email</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$content </td>
-                                <td></td>
+                                <td><p>Conteúdo do email</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$replyTo </td>
-                                <td></td>
+                                <td><p>Responder para (email)</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$replyToName </td>
-                                <td></td>
+                                <td><p>Responder para (nome)</p></td>
                             </tr>
                                             </table>
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    True|String
+                                            &mdash; <p>Se sucesso, retorna True. Se falha, retorna a string do erro.</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -345,7 +355,14 @@
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -400,7 +417,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on February 27th, 2015 at 12:18.
+                    on February 27th, 2015 at 16:32.
                 </section>
             </section>
         </section>

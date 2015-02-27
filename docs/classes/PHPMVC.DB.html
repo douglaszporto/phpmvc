@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">110</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">59</span>
                                 </a>
                             </li>
                             <li>
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1610752034"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1160412357"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1610752034" class="accordion-body collapse in">
+            <div id="namespace-1160412357" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-840428822"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1626773112"></a>
                                 <a href="../namespaces/PHPMVC.html" style="margin-left: 30px; padding-left: 0">PHPMVC</a>
             </div>
-            <div id="namespace-840428822" class="accordion-body collapse ">
+            <div id="namespace-1626773112" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -195,21 +195,9 @@
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
                     <h1><small>\PHPMVC</small>DB</h1>
-                    <p><em>Name:        DB
-Description: Classe responsável por centralizar todas as operações de Banco de dados.</em></p>
-                    <p>JAMAIS EFETUE QUALQUER OPERAÇÃO EM BANCO SEM UTILIZAR ESTA CLASSE</p>
-<pre><code>           Bancos suportados atualmente:
-               --------------------------
-               | DBMS       | Driver    |
-               --------------------------
-               | SQL Server | sqlsrv    |
-               | SQL Server | mssql     |
-               | Postgres   | postgres  | &lt;-- Não testado
-               | MySQL      | mysql,    | &lt;-- Não testado
-               | MySQL PDO  | mysql_pdo | &lt;-- Não testado
-               --------------------------</code></pre>
-<p>Creation: 27/08/2014
-Author:   Douglas Zanotta</p>
+                    <p><em>Classe responsável por centralizar todas as operações de Banco de dados.*
+JAMAIS EFETUE QUALQUER OPERAÇÃO EM BANCO SEM UTILIZAR ESTA CLASSE</em></p>
+                    <p>Creation: 27/08/2014</p>
                     
                                         
                     <section id="summary">
@@ -314,7 +302,14 @@ Author:   Douglas Zanotta</p>
                                                                         </dl>
                     <h2>Tags</h2>
                     <table class="table table-condensed">
-                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>: Douglas Zanotta</p>
+                                                            </td>
+                        </tr>
                                         </table>
                 </aside>
             </div>
@@ -702,10 +697,8 @@ Author:   Douglas Zanotta</p>
                 <h3 class="public ">__construct()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">__construct() </pre>
-                <p><em>Name:        Construtor
-Description: Contrutor da classe de conexão com o banco de dados.</em></p>
-                <p>Creation: 08/08/2014
-Author:   Douglas Zanotta</p>
+                <p><em>Contrutor da classe de conexão com o banco de dados. A conexão com o banco é aberta neste método.</em></p>
+                <p>Creation: 08/08/2014</p>
 
                 
                 
@@ -718,7 +711,14 @@ Author:   Douglas Zanotta</p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -729,15 +729,15 @@ Author:   Douglas Zanotta</p>
             <article class="method">
                 <h3 class="public ">getInstance()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getInstance() </pre>
-                <p><em>Name:        getInstance
-Description: Método que retorna a instancia ativa da classe. Utilizado para não abrir duas conexões numa mesma execução.</em></p>
-                <p>Creation: 08/08/2014
-Author:   Douglas Zanotta</p>
+                <pre class="signature" style="margin-right: 54px;">getInstance() : \PHPMVC\DB</pre>
+                <p><em>Método que retorna a instancia ativa da classe. Utilizado para não abrir duas conexões numa mesma execução.</em></p>
+                <p>Creation: 08/08/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    <a href="../classes/PHPMVC.DB.html">\PHPMVC\DB</a>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -747,7 +747,14 @@ Author:   Douglas Zanotta</p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -759,10 +766,8 @@ Author:   Douglas Zanotta</p>
                 <h3 class="public ">freeResult()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">freeResult() </pre>
-                <p><em>Name:        FreeResult
-Description: Libera os recursos utilizados para a consulta</em></p>
-                <p>Creation: 08/08/2014
-Author:   Douglas Zanotta</p>
+                <p><em>Libera os recursos utilizados para a consulta</em></p>
+                <p>Creation: 08/08/2014</p>
 
                 
                 
@@ -775,7 +780,14 @@ Author:   Douglas Zanotta</p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -786,553 +798,23 @@ Author:   Douglas Zanotta</p>
             <article class="method">
                 <h3 class="public ">Clean()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Clean(  <span class="argument">$val</span>) </pre>
-                <p><em>Name:        Clean
-Description: Método estático responsável por limpar o valor fornecido (Segurança contra SQL Injection)</em></p>
-                <p>Creation: 28/08/2014
-Author:   Douglas Zanotta</p>
+                <pre class="signature" style="margin-right: 54px;">Clean(  <span class="argument">$val</span>) : String</pre>
+                <p><em>Método estático responsável por limpar o valor fornecido (Segurança contra SQL Injection)</em></p>
+                <p>Creation: 28/08/2014</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
                                 <td></td>
                                 <td>$val </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                            <span class="label label-info">static</span>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_Boolean" name="method_Boolean" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">Boolean()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Boolean(  <span class="argument">$val</span>) </pre>
-                <p><em>Name:        Boolean
-Description: Método estático responsável por transformar um booleano do PHP para um booleano do banco utilizado</em></p>
-                <p>Creation: 18/09/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$val </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                            <span class="label label-info">static</span>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_PasswordFormat" name="method_PasswordFormat" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">PasswordFormat()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">PasswordFormat(  <span class="argument">$v</span>) </pre>
-                <p><em>Name:        PasswordFormat
-Description: Método estático responsável por retornar o formato utilizado para senhas.</em></p>
-                <p>Creation: 29/08/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$v </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                            <span class="label label-info">static</span>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_CacheStatus" name="method_CacheStatus" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">CacheStatus()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">CacheStatus(  <span class="argument">$status</span>) </pre>
-                <p><em>Name:        CacheEnable
-Description: Informa a classe que o uso de cache está ATIVADO/DASTIVADO para esta instancia</em></p>
-                <p>Creation: 03/12/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$status </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_InsertedId" name="method_InsertedId" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">InsertedId()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">InsertedId() </pre>
-                <p><em>Name:        InsertedId
-Description: Obtem o valor do último id inserido.</em></p>
-                <p>Creation: 29/08/2014
-Author:   Douglas Zanotta</p>
-
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_Query" name="method_Query" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">Query()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Query(  <span class="argument">$sql</span>) </pre>
-                <p><em>Name:        Query
-Description: Método responsável por enviar a Query para execução.</em></p>
-                <p>Creation: 08/08/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$sql </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_Execute" name="method_Execute" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">Execute()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Execute() </pre>
-                <p><em>Name:        Execute
-Description: Método estático responsável por executar Stored Procedures (Não trata Sotred Procedures com retorno).</em></p>
-                <p>Este método recebe parâmetros variáveis. O primeiro parâmetro deve ser o nome da SP executada.
-Os parâmetros subsequentes serão enviados para a chamada da SP.</p>
-<pre><code>           Por exemplo, se quisermos executar "EXECUTE banco.dbo.minhaStoredProcedure 1,2,3",
-           chamaremos DB::Execute('banco.dbo.minhaStoredProcedure',1,2,3);</code></pre>
-<p>Creation: 27/11/2014
-Author:   Douglas Zanotta</p>
-
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                            <span class="label label-info">static</span>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_QuerySelect" name="method_QuerySelect" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">QuerySelect()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">QuerySelect(  <span class="argument">$sqlParts</span>) </pre>
-                <p><em>Name:        QuerySelect
-Description: Método responsável por enviar uma Query de SELECT para execução.</em></p>
-                <p>Creation: 28/08/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$sqlParts </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_QueryInsert" name="method_QueryInsert" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">QueryInsert()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">QueryInsert(  <span class="argument">$table</span>,   <span class="argument">$fieldsList</span>) </pre>
-                <p><em>Name:        QueryInsert
-Description: Método responsável por enviar uma Query de INSERT para execução.</em></p>
-                <p>Creation: 28/08/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$table </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$fieldsList </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_QueryUpdate" name="method_QueryUpdate" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">QueryUpdate()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">QueryUpdate(  <span class="argument">$table</span>,   <span class="argument">$fieldsList</span>,   <span class="argument">$filter</span>) </pre>
-                <p><em>Name:        QueryUpdate
-Description: Método responsável por enviar uma Query de UPDATE para execução.</em></p>
-                <p>Creation: 28/08/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$table </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$fieldsList </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$filter </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_QueryDelete" name="method_QueryDelete" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">QueryDelete()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">QueryDelete(  <span class="argument">$table</span>,   <span class="argument">$filter</span>) </pre>
-                <p><em>Name:        QueryDelete
-Description: Método responsável por enviar uma Query de DELETE para execução.</em></p>
-                <p>Creation: 28/08/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$table </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$filter </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_NumRows" name="method_NumRows" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">NumRows()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">NumRows() </pre>
-                <p><em>Name:        NumRows
-Description: Método que retorna o número de linhas da última consulta.</em></p>
-                <p>Creation: 08/08/2014
-Author:   Douglas Zanotta</p>
-
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_Fetch" name="method_Fetch" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">Fetch()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Fetch(  <span class="argument">$type = &#039;assoc&#039;</span>) </pre>
-                <p><em>Name:        Fetch
-Description: Puxa os dados do cache (já em memória) ou executa o FetchData, caso não haja cache.</em></p>
-                <p>Creation: 08/08/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$type </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_FetchData" name="method_FetchData" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">FetchData()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">FetchData(  <span class="argument">$type = &#039;assoc&#039;</span>) </pre>
-                <p><em>Name:        FetchData
-Description: Executa fetch_object, fetch_assoc ou fetch_array de acordo com o driver.</em></p>
-                <p>Creation: 08/08/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$type </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_GetValues" name="method_GetValues" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">GetValues()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">GetValues(  <span class="argument">$table</span>,   <span class="argument">$fieldVal</span>,   <span class="argument">$fieldDesc</span>,   <span class="argument">$where = &quot;&quot;</span>,   <span class="argument">$order = &quot;&quot;</span>) : array</pre>
-                <p><em>Name:        GetValues
-Description: Método estático que retorna um array to tipo array(&quot;value&quot;,&quot;label&quot;) com os dados da tabela selecionada.</em></p>
-                <p>Este método é utilizado para montagem de <select>s e <option>s no painel de adminstração.</p>
-<p>Creation: 13/11/2014
-Author:   Douglas Zanotta</p>
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td></td>
-                                <td>$table </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$fieldVal </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$fieldDesc </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$where </td>
-                                <td></td>
-                            </tr>
-                                                    <tr>
-                                <td></td>
-                                <td>$order </td>
                                 <td></td>
                             </tr>
                                             </table>
                 
                 
                                     <h4>Returns</h4>
-                    array
+                    String
+                                            &mdash; <p>Dados sem carateres/palavras perigosas</p>
                                     				
                             </article>
         </div>
@@ -1343,7 +825,654 @@ Author:   Douglas Zanotta</p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_Boolean" name="method_Boolean" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">Boolean()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">Boolean(Boolean  <span class="argument">$val</span>) : String</pre>
+                <p><em>Método estático responsável por transformar um booleano do PHP para um booleano do banco</em></p>
+                <p>Creation: 18/09/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>Boolean</td>
+                                <td>$val </td>
+                                <td><p>Valor a ser convertido</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    String
+                                            &mdash; <p>Valor boolean em banco</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_PasswordFormat" name="method_PasswordFormat" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">PasswordFormat()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">PasswordFormat(String  <span class="argument">$v</span>) : String</pre>
+                <p><em>Método estático responsável por retornar o formato utilizado para senhas.</em></p>
+                <p>Creation: 29/08/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>String</td>
+                                <td>$v </td>
+                                <td><p>Monta a chamada de criptografia para senhas</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    String
+                                            &mdash; <p>Campo convertido no formato de senha</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_CacheStatus" name="method_CacheStatus" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">CacheStatus()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">CacheStatus(Boolean  <span class="argument">$status</span>) </pre>
+                <p><em>Informa a classe que o uso de cache está ATIVADO/DESTIVADO para esta instancia</em></p>
+                <p>Creation: 03/12/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>Boolean</td>
+                                <td>$status </td>
+                                <td><p>Definição de Ativado/Desativado para o cache de banco de dados.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_InsertedId" name="method_InsertedId" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">InsertedId()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">InsertedId() : Integer|False</pre>
+                <p><em>Obtem o valor do último id inserido.</em></p>
+                <p>Creation: 29/08/2014</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    Integer|False
+                                            &mdash; <p>Id do último registro inserido (ou false, caso falho)</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_Query" name="method_Query" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">Query()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">Query(String  <span class="argument">$sql</span>) : Boolean</pre>
+                <p><em>Método responsável por enviar a Query para execução.</em></p>
+                <p>Caso haja erro na consulta, podemos ler o erro no arquivo logs/queries.log</p>
+<p>Creation: 08/08/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>String</td>
+                                <td>$sql </td>
+                                <td><p>SQL a ser executada</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    Boolean
+                                            &mdash; <p>Excutado com sucesso (true|false)</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_Execute" name="method_Execute" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">Execute()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">Execute() : Boolean</pre>
+                <p><em>Método estático responsável por executar Stored Procedures (Não trata Sotred Procedures com retorno).</em></p>
+                <p>Este método recebe parâmetros variáveis. O primeiro parâmetro deve ser o nome da SP executada.
+Os parâmetros subsequentes serão enviados para a chamada da SP.</p>
+<p>Por exemplo, se quisermos executar &quot;EXECUTE banco.dbo.minhaStoredProcedure 1,2,3&quot;,
+chamaremos DB::Execute('banco.dbo.minhaStoredProcedure',1,2,3);</p>
+<p>Creation: 27/11/2014</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    Boolean
+                                            &mdash; <p>Excutado com sucesso (true|false)</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_QuerySelect" name="method_QuerySelect" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">QuerySelect()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">QuerySelect(Array  <span class="argument">$sqlParts</span>) : Boolean</pre>
+                <p><em>Método responsável por enviar uma Query de SELECT para execução.</em></p>
+                <p>Creation: 28/08/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>Array</td>
+                                <td>$sqlParts </td>
+                                <td><p>Array com as partes da consulta para composição</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    Boolean
+                                            &mdash; <p>Resultado da execução do SELECT</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_QueryInsert" name="method_QueryInsert" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">QueryInsert()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">QueryInsert(String  <span class="argument">$table</span>,   <span class="argument">$fieldsList</span>) : Boolean</pre>
+                <p><em>Método responsável por enviar uma Query de INSERT para execução.</em></p>
+                <p>Creation: 28/08/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>String</td>
+                                <td>$table </td>
+                                <td><p>Nome da tabela onde os dados serão inseridos</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$fieldsList </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    Boolean
+                                            &mdash; <p>Resultado da execução do INSERT</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_QueryUpdate" name="method_QueryUpdate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">QueryUpdate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">QueryUpdate(String  <span class="argument">$table</span>,   <span class="argument">$fieldsList</span>, String  <span class="argument">$filter</span>) : Boolean</pre>
+                <p><em>Método responsável por enviar uma Query de UPDATE para execução.</em></p>
+                <p>Creation: 28/08/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>String</td>
+                                <td>$table </td>
+                                <td><p>Tabela onde os dados serão atualizados</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$fieldsList </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>String</td>
+                                <td>$filter </td>
+                                <td><p>String do WHERE para filtro do update</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    Boolean
+                                            &mdash; <p>Resultado da execução do UPDATE</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_QueryDelete" name="method_QueryDelete" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">QueryDelete()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">QueryDelete(String  <span class="argument">$table</span>, String  <span class="argument">$filter</span>) : Boolean</pre>
+                <p><em>Método responsável por enviar uma Query de DELETE para execução.</em></p>
+                <p>Creation: 28/08/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>String</td>
+                                <td>$table </td>
+                                <td><p>Tabela onde os dados serão removidos</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>String</td>
+                                <td>$filter </td>
+                                <td><p>String do WHERE para filtro do delete</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    Boolean
+                                            &mdash; <p>Resultado da execução do DELETE</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_NumRows" name="method_NumRows" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">NumRows()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">NumRows() : Integer</pre>
+                <p><em>Description: Método que retorna o número de linhas da última consulta.</em></p>
+                <p>Creation: 08/08/2014</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    Integer
+                                            &mdash; <p>Número de registro obtidos na última consulta</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_Fetch" name="method_Fetch" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">Fetch()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">Fetch(String  <span class="argument">$type = &#039;assoc&#039;</span>) : Object|Array</pre>
+                <p><em>Puxa os dados do cache (já em memória) ou executa o FetchData, caso não haja cache.</em></p>
+                <p>Creation: 08/08/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>String</td>
+                                <td>$type </td>
+                                <td><p>Tipo do retorno esperado (Object ou Array)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    Object|Array
+                                            &mdash; <p>Dados retornados pelo banco de dados na última consulta (ou em cache)</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_FetchData" name="method_FetchData" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">FetchData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">FetchData(String  <span class="argument">$type = &#039;assoc&#039;</span>) : Object|Array</pre>
+                <p><em>Executa fetch_object, fetch_assoc ou fetch_array de acordo com o driver.</em></p>
+                <p>Executado quando não há cache para a consulta em questão.</p>
+<p>Creation: 08/08/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>String</td>
+                                <td>$type </td>
+                                <td><p>Tipo de associação realizada (assoc, object, numeric)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    Object|Array
+                                            &mdash; <p>Dados obtidos na última consulta ao banco de dados</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_GetValues" name="method_GetValues" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">GetValues()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">GetValues(String  <span class="argument">$table</span>, String  <span class="argument">$fieldVal</span>, String  <span class="argument">$fieldDesc</span>, String  <span class="argument">$where = &quot;&quot;</span>, String  <span class="argument">$order = &quot;&quot;</span>) : Array</pre>
+                <p><em>Método estático que retorna um array to tipo array(&quot;value&quot;,&quot;label&quot;) com os dados da tabela selecionada.</em></p>
+                <p>Este método é utilizado para montagem de <select>s e <option>s no painel de adminstração.</p>
+<p>Creation: 13/11/2014</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>String</td>
+                                <td>$table </td>
+                                <td><p>Nome da tabela a ser consultada</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>String</td>
+                                <td>$fieldVal </td>
+                                <td><p>Nome do campo que fornecerá a chave no retorno</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>String</td>
+                                <td>$fieldDesc </td>
+                                <td><p>Nome do campo que fornecerá o valor no retorno</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>String</td>
+                                <td>$where </td>
+                                <td><p>Filtro que será aplicado para retorno dos dados (não obrigatório)</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>String</td>
+                                <td>$order </td>
+                                <td><p>Cláusula adicionada ao ORDER BY da query (não obrigatório)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    Array
+                                            &mdash; <p>Arary Chave =&gt; Valor com todos os registros retornados.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1355,10 +1484,8 @@ Author:   Douglas Zanotta</p>
                 <h3 class="public ">BeginTransaction()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">BeginTransaction() </pre>
-                <p><em>Name:        BeginTransaction
-   Description: Inicia uma transação</em></p>
-                <p>Creation: 14/07/2014
-Author:   Douglas Zanotta</p>
+                <p><em>Inicia uma transação</em></p>
+                <p>Creation: 14/07/2014</p>
 
                 
                 
@@ -1371,7 +1498,14 @@ Author:   Douglas Zanotta</p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1383,10 +1517,8 @@ Author:   Douglas Zanotta</p>
                 <h3 class="public ">CommitTransaction()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">CommitTransaction() </pre>
-                <p><em>Name:        CommitTransaction
-   Description: Finaliza a transação, salvando os dados no banco de dados</em></p>
-                <p>Creation: 14/07/2014
-Author:   Douglas Zanotta</p>
+                <p><em>Finaliza a transação, salvando os dados no banco de dados</em></p>
+                <p>Creation: 14/07/2014</p>
 
                 
                 
@@ -1399,7 +1531,14 @@ Author:   Douglas Zanotta</p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1411,10 +1550,8 @@ Author:   Douglas Zanotta</p>
                 <h3 class="public ">RollbackTransaction()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">RollbackTransaction() </pre>
-                <p><em>Name:        RollbackTransaction
-   Description: Finaliza a transação, salvando os dados no banco de dados</em></p>
-                <p>Creation: 14/07/2014
-Author:   Douglas Zanotta</p>
+                <p><em>Finaliza a transação, salvando os dados no banco de dados</em></p>
+                <p>Creation: 14/07/2014</p>
 
                 
                 
@@ -1427,7 +1564,14 @@ Author:   Douglas Zanotta</p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1439,10 +1583,8 @@ Author:   Douglas Zanotta</p>
                 <h3 class="public ">__destruct()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">__destruct() </pre>
-                <p><em>Name:        Destrutor
-Description: Método responsável pela remoçao do objeto.</em></p>
-                <p>Creation: 08/08/2014
-Author:   Douglas Zanotta</p>
+                <p><em>Método responsável pela remoçao do objeto.</em></p>
+                <p>Creation: 08/08/2014</p>
 
                 
                 
@@ -1455,7 +1597,14 @@ Author:   Douglas Zanotta</p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>: Douglas Zanotta</p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1510,7 +1659,7 @@ Author:   Douglas Zanotta</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on February 27th, 2015 at 12:18.
+                    on February 27th, 2015 at 16:32.
                 </section>
             </section>
         </section>

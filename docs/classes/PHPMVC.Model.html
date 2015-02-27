@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">110</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">59</span>
                                 </a>
                             </li>
                             <li>
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-857347182"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2048777609"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-857347182" class="accordion-body collapse in">
+            <div id="namespace-2048777609" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1777080652"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-921641201"></a>
                                 <a href="../namespaces/PHPMVC.html" style="margin-left: 30px; padding-left: 0">PHPMVC</a>
             </div>
-            <div id="namespace-1777080652" class="accordion-body collapse ">
+            <div id="namespace-921641201" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -195,17 +195,15 @@
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
                     <h1><small>\PHPMVC</small>Model</h1>
-                    <p><em>Name:        Model
-Description: Classe responsável pelo mapeamento entre o bando de dados e os objetos (ORM).</em></p>
+                    <p><em>Classe responsável pelo mapeamento entre o bando de dados e os objetos (ORM).</em></p>
                     <p>Esta classe pode ser usada de duas formas:
 Utilizada para montar e executar uma query.</p>
-<pre><code>           $obj = new Model();
-           $obj-&gt;Column('id')-&gt;Column('nome')-&gt;Where('email = "teste@teste.com"')-&gt;Exec();
-
-           Utilizada para obter os dados de uma linha específica
-           $obj = new ClasseQueExtendeModel();
-           $obj-&gt;id = 3;
-           echo $obj-&gt;nome;</code></pre>
+<p>$obj = new Model();
+$obj-&gt;Column('id')-&gt;Column('nome')-&gt;Where('email = &quot;teste@teste.com&quot;')-&gt;Exec();</p>
+<p>//Utilizada para obter os dados de uma linha específica
+$obj = new ClasseQueExtendeModel();
+$obj-&gt;id = 3;
+echo $obj-&gt;nome;</p>
 <p>Creation: 01/09/2014</p>
                     
                                         
@@ -275,7 +273,6 @@ Utilizada para montar e executar uma query.</p>
                         <section class="row-fluid private">
                             <section class="span4">
                                                                     <a href="../classes/PHPMVC.Model.html#method_Read" class="">Read()</a><br />
-                                                                    <a href="../classes/PHPMVC.Model.html#method_SetFieldValues" class="">SetFieldValues()</a><br />
                                                             </section>
                             <section class="span4">
                                                                     <a href="../classes/PHPMVC.Model.html#property_fields" class="">$fields</a><br />
@@ -1166,13 +1163,16 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">GetFields()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">GetFields() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">GetFields() : Array</pre>
+                <p><em>Obtem um array com os campos da model</em></p>
+                <p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array
+                                            &mdash; <p>Campos da model</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1181,7 +1181,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1192,13 +1199,16 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">GetPrimaryKeyName()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">GetPrimaryKeyName() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">GetPrimaryKeyName() : Array</pre>
+                <p><em>Obtem no nome do campo definido como chave primária</em></p>
+                <p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array
+                                            &mdash; <p>Campos da model</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1207,7 +1217,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1218,13 +1235,16 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">All()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">All() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">All() : Array</pre>
+                <p><em>Remove todas as definições da model (campos de retorno, where, order by, etc), executa a query básica e retorna todos os dados.</em></p>
+                <p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array
+                                            &mdash; <p>Dados da consulta</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1233,7 +1253,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1244,13 +1271,16 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">Exec()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Exec() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">Exec() : Array</pre>
+                <p><em>Executa a consulta (de acordo com as definições de campos where, order, etc) e retorna os dados obtidos na consulta</em></p>
+                <p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array
+                                            &mdash; <p>Dados da consulta</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1259,7 +1289,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1270,13 +1307,17 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">First()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">First() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">First() : Array|False</pre>
+                <p><em>Retorna o primeiro registro de uma consulta.</em></p>
+                <p>Caso não haja dados armazenados na model, executa a consulta antes de retornar o registro.</p>
+<p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array|False
+                                            &mdash; <p>Dados do primeiro registro (ou false, caso não haja registros)</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1285,7 +1326,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1296,13 +1344,17 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">Last()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Last() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">Last() : Array|False</pre>
+                <p><em>Retorna o úlitmo registro de uma consulta.</em></p>
+                <p>Caso não haja dados armazenados na model, executa a consulta antes de retornar o registro.</p>
+<p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array|False
+                                            &mdash; <p>Dados do úlitmo registro (ou false, caso não haja registros)</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1311,7 +1363,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1322,9 +1381,10 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">Index()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Index(  <span class="argument">$i</span>) </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">Index(  <span class="argument">$i</span>) : Array|False</pre>
+                <p><em>Retorna o $i-ésimo registro de uma consulta (iniciando em 1).</em></p>
+                <p>Caso não haja dados armazenados na model, executa a consulta antes de retornar o registro.</p>
+<p>Creation: 01/09/2014</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1336,7 +1396,10 @@ O ID deve ter sido informado anteriormente.</em></p>
                                             </table>
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array|False
+                                            &mdash; <p>Dados do $i-ésimo registro (ou false, caso não haja registros)</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1345,7 +1408,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1356,9 +1426,11 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">ByFieldValue()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">ByFieldValue(  <span class="argument">$field</span>,   <span class="argument">$val</span>) </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">ByFieldValue(  <span class="argument">$field</span>,   <span class="argument">$val</span>) : Array</pre>
+                <p><em>Retorna o primeiro registro onde o campo informado possui o valor especificado.</em></p>
+                <p>Este método é útil para obter um registro específico sem a necessidade de refazer a consulta.
+Caso não haja dados armazenados na model, executa a consulta antes de retornar o registro.</p>
+<p>Creation: 01/09/2014</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1375,7 +1447,10 @@ O ID deve ter sido informado anteriormente.</em></p>
                                             </table>
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array
+                                            &mdash; <p>Dados do registro (ou array vazio)</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1384,7 +1459,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1395,13 +1477,16 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">Next()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Next() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">Next() : Array|False</pre>
+                <p><em>Retorna o próximo registro de uma consulta (iniciando em 1).</em></p>
+                <p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array|False
+                                            &mdash; <p>Dados do $i-ésimo registro (ou false, caso não haja registros)</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1410,7 +1495,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1421,13 +1513,16 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">Previous()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Previous() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">Previous() : Array|False</pre>
+                <p><em>Retorna o registro anterior em uma consulta (iniciando em 1).</em></p>
+                <p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    Array|False
+                                            &mdash; <p>Dados do $i-ésimo registro (ou false, caso não haja registros)</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1436,7 +1531,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1447,13 +1549,16 @@ O ID deve ter sido informado anteriormente.</em></p>
             <article class="method">
                 <h3 class="public ">Clear()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">Clear() </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">Clear() : \PHPMVC\Model</pre>
+                <p><em>Limpa o estado da model, voltando ao estado inicial</em></p>
+                <p>Creation: 01/09/2014</p>
 
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    <a href="../classes/PHPMVC.Model.html">\PHPMVC\Model</a>
+                                            &mdash; <p>$this</p>
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1462,7 +1567,14 @@ O ID deve ter sido informado anteriormente.</em></p>
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -1551,32 +1663,6 @@ Este retorno pode vir dor cache de consultas sql.</p>
         </aside>
     </div>
 
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_SetFieldValues" name="method_SetFieldValues" class="anchor"></a>
-            <article class="method">
-                <h3 class="private ">SetFieldValues()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">SetFieldValues() </pre>
-                <p><em></em></p>
-                
-
-                
-                
-                				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                                            <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
                                     </div>
     </section>
 
@@ -1627,7 +1713,7 @@ Este retorno pode vir dor cache de consultas sql.</p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on February 27th, 2015 at 12:18.
+                    on February 27th, 2015 at 16:32.
                 </section>
             </section>
         </section>

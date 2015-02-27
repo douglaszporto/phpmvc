@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">110</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">59</span>
                                 </a>
                             </li>
                             <li>
@@ -144,19 +144,19 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2057861082"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1300022134"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-2057861082" class="accordion-body collapse in">
+            <div id="namespace-1300022134" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2093679700"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1622156865"></a>
                                 <a href="../namespaces/PHPMVC.html" style="margin-left: 30px; padding-left: 0">PHPMVC</a>
             </div>
-            <div id="namespace-2093679700" class="accordion-body collapse ">
+            <div id="namespace-1622156865" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -195,8 +195,8 @@
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
                     <h1><small>\PHPMVC</small>URL</h1>
-                    <p><em></em></p>
-                    
+                    <p><em>Classe reponsável por fazer as chamadas dos controllers, baseada no mapeamento de urls fornecido no urls.php</em></p>
+                    <p>Creation: 27/02/2015</p>
                     
                                         
                     <section id="summary">
@@ -270,7 +270,14 @@
                                                                         </dl>
                     <h2>Tags</h2>
                     <table class="table table-condensed">
-                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                            </td>
+                        </tr>
                                         </table>
                 </aside>
             </div>
@@ -379,21 +386,24 @@
             <article class="method">
                 <h3 class="public ">url()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">url(  <span class="argument">$pattern</span>,   <span class="argument">$callback</span>) </pre>
-                <p><em></em></p>
-                
+                <pre class="signature" style="margin-right: 54px;">url(String  <span class="argument">$pattern</span>, String  <span class="argument">$callback</span>) </pre>
+                <p><em>Método responsável por verificar se o padrão informado no mapeamento coincide com a url informada.</em></p>
+                <p>Caso afirmativo, descobre se a classe e o método mapeado existem e executa-os (a classe será instanciada, portanto, os métodos não precisam ser estáticos).
+Quando a execução ocorrer, finaliza a execução do script, para não ocorrer outra execução (caso a url informada atenda mais de um padrão)</p>
+<p>Os grupos capturados na expressão regular serão passados como parâmetro para o método específicado.</p>
+<p>Creation: 27/02/2015</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$pattern </td>
-                                <td></td>
+                                <td><p>Padrão a ser verificado (RegExp)</p></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>String</td>
                                 <td>$callback </td>
-                                <td></td>
+                                <td><p>Classe e Método que serão chamados (String no formato &quot;Classe.Metodo&quot;)</p></td>
                             </tr>
                                             </table>
                 
@@ -407,7 +417,14 @@
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -419,8 +436,8 @@
                 <h3 class="public ">NotFound()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">NotFound() </pre>
-                <p><em></em></p>
-                
+                <p><em>Método responsável pelo tratamento de urls que não coincidiram com os padrões definidos.</em></p>
+                <p>Creation: 27/02/2015</p>
 
                 
                 
@@ -433,7 +450,14 @@
                                                                             </dl>
             <h2>Tags</h2>
             <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                    <tr>
+                        <th>
+                            author
+                        </th>
+                        <td>
+                                                                                            <p>Douglas Zanotta <a href="mailto:douglas.z.porto@gmail.com">douglas.z.porto@gmail.com</a></p>
+                                                    </td>
+                    </tr>
                             </table>
         </aside>
     </div>
@@ -488,7 +512,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on February 27th, 2015 at 12:18.
+                    on February 27th, 2015 at 16:32.
                 </section>
             </section>
         </section>

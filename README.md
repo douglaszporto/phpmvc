@@ -5,7 +5,7 @@
 * Apache com mod_rewrite
 
 ## Instalação
-git clone http://github.com/douglaszporto/phpmvc MyProjectName
+git clone http://github.com/douglaszporto/phpmvc.git MyProjectName
 
 ## Documentação
 

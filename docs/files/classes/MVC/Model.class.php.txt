@@ -144,20 +144,19 @@ class FieldModel {
 
 /**
 * 
-*	Name:        Model
-*	Description: Classe responsável pelo mapeamento entre o bando de dados e os objetos (ORM).
-*                Esta classe pode ser usada de duas formas:
-*                Utilizada para montar e executar uma query.
+*	Classe responsável pelo mapeamento entre o bando de dados e os objetos (ORM).
+*   Esta classe pode ser usada de duas formas:
+*   Utilizada para montar e executar uma query.
 *
 *
-*                $obj = new Model();
-*                $obj->Column('id')->Column('nome')->Where('email = "teste@teste.com"')->Exec();
+*   $obj = new Model();
+*   $obj->Column('id')->Column('nome')->Where('email = "teste@teste.com"')->Exec();
 *
 *
-*                Utilizada para obter os dados de uma linha específica
-*                $obj = new ClasseQueExtendeModel();
-*                $obj->id = 3;
-*                echo $obj->nome;
+*   //Utilizada para obter os dados de uma linha específica
+*   $obj = new ClasseQueExtendeModel();
+*   $obj->id = 3;
+*   echo $obj->nome;
 *	
 *	Creation: 01/09/2014
 *	@author Douglas Zanotta <douglas.z.porto@gmail.com>
@@ -166,39 +165,39 @@ class FieldModel {
 class Model {
 
 	/*
-	* @property String $table Tabela referenciada pela model
+	* @property String Tabela referenciada pela model
 	*/
 	protected $table         = "";
 	/*
-	* @property String $primaryKey Chave Primária da tabela referenciada
+	* @property String Chave Primária da tabela referenciada
 	*/
 	protected $primaryKey    = "";
 	/*
-	* @property Boolean $cacheEnable Estado de ativação do cache
+	* @property Boolean Estado de ativação do cache
 	*/
 	protected $cacheEnable   = true;
 	/*
-	* @property Array $fiels Campos (class FieldModel) utilizados por esta model
+	* @property Array Campos (class FieldModel) utilizados por esta model
 	*/
 	private   $fields        = array();
 	/*
-	* @property Array $fieldsChanges Campos que tiveram seus valores alterados
+	* @property Array Campos que tiveram seus valores alterados
 	*/
 	private   $fieldsChanged = array();
 	/*
-	* @property Array $sqlParts Partes que compões uma SQL que será constrída
+	* @property Array Partes que compões uma SQL que será constrída
 	*/
 	private   $sqlParts      = array();
 	/*
-	* @property Array $data Dados reais obtidos pela consulta
+	* @property Array Dados reais obtidos pela consulta
 	*/
 	private   $data          = array();
 	/*
-	* @property Integer $pointer Indice interno para obtenção dos dados
+	* @property Integer Indice interno para obtenção dos dados
 	*/
 	private   $pointer       = NULL;
 	/*
-	* @property Boolean $hasError Estado de erro encontrado
+	* @property Boolean Estado de erro encontrado
 	*/
 	private   $hasError      = false;
 
@@ -588,27 +587,68 @@ class Model {
 	}
 
 
+	/**
+	*	Obtem um array com os campos da model
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array Campos da model
+	*	
+	*/
 	public function GetFields(){
 		return array_keys($this->fields);
 	}
 
+	/**
+	*	Obtem no nome do campo definido como chave primária
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array Campos da model
+	*	
+	*/
 	public function GetPrimaryKeyName(){
 		return $this->primaryKey;
 	}
 
 
-
+	/**
+	*	Remove todas as definições da model (campos de retorno, where, order by, etc), executa a query básica e retorna todos os dados.
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array Dados da consulta
+	*	
+	*/
 	public function All() {
 		$this->Clear();
 		$this->Read();
 		return $this->data;
 	}
 
+	/**
+	*	Executa a consulta (de acordo com as definições de campos where, order, etc) e retorna os dados obtidos na consulta
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array Dados da consulta
+	*	
+	*/
 	public function Exec(){
 		$this->Read();
 		return $this->data;
 	}
 
+
+	/**
+	*   Retorna o primeiro registro de uma consulta.
+	*	Caso não haja dados armazenados na model, executa a consulta antes de retornar o registro.
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array|False Dados do primeiro registro (ou false, caso não haja registros)
+	*	
+	*/
 	public function First(){
 		if(empty($this->data))
 			$this->Read();
@@ -618,6 +658,15 @@ class Model {
 	}
 
 
+	/**
+	*   Retorna o úlitmo registro de uma consulta.
+	*	Caso não haja dados armazenados na model, executa a consulta antes de retornar o registro.
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array|False Dados do úlitmo registro (ou false, caso não haja registros)
+	*	
+	*/
 	public function Last() {
 		if(empty($this->data))
 			$this->Read();
@@ -627,6 +676,15 @@ class Model {
 	}
 
 
+	/**
+	*   Retorna o $i-ésimo registro de uma consulta (iniciando em 1).
+	*	Caso não haja dados armazenados na model, executa a consulta antes de retornar o registro.
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array|False Dados do $i-ésimo registro (ou false, caso não haja registros)
+	*	
+	*/
 	public function Index($i) {
 		if(empty($this->data))
 			$this->Read();
@@ -635,6 +693,17 @@ class Model {
 		return isset($this->data[$this->pointer]) ? array($this->data[$this->pointer]) : false;
 	}
 
+
+	/**
+	*   Retorna o primeiro registro onde o campo informado possui o valor especificado.
+	*   Este método é útil para obter um registro específico sem a necessidade de refazer a consulta.
+	*	Caso não haja dados armazenados na model, executa a consulta antes de retornar o registro.
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array Dados do registro (ou array vazio)
+	*	
+	*/
 	public function ByFieldValue($field, $val){
 		if(empty($this->data))
 			$this->Read();
@@ -646,18 +715,38 @@ class Model {
 		return array();
 	}
 
+
+	/**
+	*   Retorna o próximo registro de uma consulta (iniciando em 1).
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array|False Dados do $i-ésimo registro (ou false, caso não haja registros)
+	*	
+	*/
 	public function Next() {
 		$this->pointer++;
 		$this->SetFieldValues();
 		return isset($this->data[$this->pointer]) ? array($this->data[$this->pointer]) : false;
 	}
 
+	/**
+	*   Retorna o registro anterior em uma consulta (iniciando em 1).
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Array|False Dados do $i-ésimo registro (ou false, caso não haja registros)
+	*	
+	*/
 	public function Previous() {
 		$this->pointer--;
 		$this->SetFieldValues();
 		return isset($this->data[$this->pointer]) ? array($this->data[$this->pointer]) : false;
 	}
 
+	/**
+	*   @ignore
+	*/
 	private function SetFieldValues() {
 		foreach($this->fields as $f => $v){
 			if(isset($this->data[$this->pointer][$f]))
@@ -665,6 +754,15 @@ class Model {
 		}
 	}
 
+
+	/**
+	*   Limpa o estado da model, voltando ao estado inicial
+	*	
+	*	Creation: 01/09/2014
+	*	@author Douglas Zanotta <douglas.z.porto@gmail.com>
+	*	@return Model $this
+	*	
+	*/
 	public function Clear(){
 		$this->data = array();
 		$this->pointer = NULL;
