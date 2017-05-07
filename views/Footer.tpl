@@ -1,3 +1,6 @@
-		<div>Aqui vai o seu rodapé</div>
+	</div> <!-- #content from Header.tpl -->
+		<footer>
+			{{$site_name}} - &copy; {{$defaultyear}}
+		</footer>
 	</body>
 </html>

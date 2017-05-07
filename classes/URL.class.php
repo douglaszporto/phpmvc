@@ -55,8 +55,8 @@ class URL {
 			$method        = isset($callbackParts[1]) ? $callbackParts[1] : "";
 			$hasError      = "";
 
-			$file = "controllers/".$class.".php";
-			$path = dirname(__FILE__) . "/../" .$file;
+			$file = $class.".php";
+			$path = PATH_CONTROLLERS . $file;
 			if(file_exists($path)) {
 				require_once $path;
 				if(class_exists($class)){
@@ -67,7 +67,7 @@ class URL {
 							call_user_func_array(array($instancia,$method), $args);
 						}catch(\Exception $e){
 							Log::Dump($file.': '.$method. '('.$e->getLine().') # '.$e->getMessage(),'exceptions.log');
-							require_once dirname(__FILE__) . "/../controllers/Error.php";
+							require_once PATH_CONTROLLERS . "Error.php";
 							$error = new \ErrorController();
 							$error->CatchException($e->getMessage());
 						}
@@ -82,8 +82,8 @@ class URL {
 			}
 
 			if(!empty($hasError)){
-				Log::Dump("[".date('Y-m-d H:i:s')."][".$_SERVER['REMOTE_ADDR']."][FROM:".(isset($_SERVER["HTTP_REFERER"])?$_SERVER["HTTP_REFERER"]:"DIRECT")."][SESSID:".session_id()."][FAIL]:".$this->urlfull,'access.log');
-				require_once dirname(__FILE__) . "/../controllers/Error.php";
+				echo "[".date('Y-m-d H:i:s')."][".$_SERVER['REMOTE_ADDR']."][FROM:".(isset($_SERVER["HTTP_REFERER"])?$_SERVER["HTTP_REFERER"]:"DIRECT")."][SESSID:".session_id()."][FAIL]:".$this->urlfull,'access.log';
+				require_once PATH_CONTROLLERS . "Error.php";
 				$error = new ErrorController();
 				$error->$hasError[0]($hasError[1]);
 			}

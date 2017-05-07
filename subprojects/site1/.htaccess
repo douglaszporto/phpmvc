@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^(?!(?:statics|docs|sitemap\.xml))(.*?)$ urls.php?url=$1&sub=site1 [QSA,L,NC]

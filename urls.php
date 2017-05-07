@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname(__FILE__) . "/config.php";
+
 require_once dirname(__FILE__) . "/classes/DB.class.php";
 require_once dirname(__FILE__) . "/classes/Log.class.php";
 require_once dirname(__FILE__) . "/classes/MVC/Model.class.php";

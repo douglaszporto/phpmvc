@@ -15,6 +15,7 @@ define('VIEW_RENDER_AJAX'   , 1);
 define('VIEW_RENDER_DEFAULT', 2);
 
 require_once SMARTY_DIR . 'Smarty.class.php';
+require_once dirname(__FILE__) . '/../I18n.class.php';
 require_once dirname(__FILE__) . '/../../config.php';
 
 
@@ -141,6 +142,9 @@ class View {
 			$smarty->Define('version',SITE_VERSION);
 			$smarty->Define('domain',SITE_DOMAIN);
 
+			$i18n = new I18n(SITE_LANG);
+			$smarty->Define('i18n',$i18n->getStrings());
+
 			return $smarty->ReturnFile($file);
 		} catch(\ErrorException $e) {
 			return '';
@@ -180,6 +184,9 @@ class View {
 
 			$smarty->Define('version',SITE_VERSION);
 			$smarty->Define('domain',SITE_DOMAIN);
+
+			$i18n = new I18n(SITE_LANG);
+			$smarty->Define('i18n',$i18n->getStrings());
 
 			$smarty->RenderFile($file);
 		} catch(\ErrorException $e) {

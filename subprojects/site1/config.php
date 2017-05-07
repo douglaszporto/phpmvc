@@ -9,9 +9,9 @@
 	SITE_PRODUCTION: This flag define if site is on "Production" ou "Develop" mode 
 */
 
-define('SITE_NAME', 'Wii Fix Home');
-define('SITE_VERSION', '20150107');
-define('SITE_DOMAIN', '//localhost.wiifixbase');
+define('SITE_NAME', 'Site 1');
+define('SITE_VERSION', '20170506');
+define('SITE_DOMAIN', '//site1.localhost.wiifixbase');
 define('SITE_PRODUCTION', false);
 
 define('SITE_HEADTITLE', 'Wii Fix repair samsung galaxy repair apple iphone and sony');
