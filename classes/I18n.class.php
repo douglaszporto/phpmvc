@@ -22,9 +22,8 @@ class I18n{
     public function __construct($lang){
         $this->lang = $lang;
 
-        $file = file_get_contents(PATH_DIR . 'i18n/' . $lang . '.json');
-
         try{
+            $file = file_get_contents(PATH_DIR . 'i18n/' . $lang . '.json');
             $this->strings = json_decode($file, true);
         }catch(\Exception $e){
             // TODO: Log error!

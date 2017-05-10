@@ -190,7 +190,7 @@ class View {
 
 			$smarty->RenderFile($file);
 		} catch(\ErrorException $e) {
-			echo "Ocorreu algum erro no template {$file}:<br/>";
+			echo "Ocorreu algum erro no template {$file}:<br/>" , $e->getMessage(), "<br/><br/>";
 			foreach ($context as $k => $v)
 				echo $k," => ",$v,"<br/>";
 		}
