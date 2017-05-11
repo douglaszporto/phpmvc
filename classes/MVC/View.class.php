@@ -96,6 +96,36 @@ class View {
 		$this->smarty->assign('request_path',trim($_SERVER["REQUEST_URI"],"/"));
 		$this->smarty->assign('siteProduction',SITE_PRODUCTION);
 
+		$this->smarty->assign('site_headtitle', SITE_HEADTITLE);
+		$this->smarty->assign('site_description', SITE_DESCRIPTION);
+		$this->smarty->assign('site_title', SITE_TITLE);
+		$this->smarty->assign('site_subtitle', SITE_SUBTITLE);
+		$this->smarty->assign('site_addressfull', SITE_ADDRESSFULL);
+		$this->smarty->assign('site_addressstreet', SITE_ADDRESSSTREET);
+		$this->smarty->assign('site_addresslocality', SITE_ADDRESSLOCALITY);
+		$this->smarty->assign('site_addressregion', SITE_ADDRESSREGION);
+		$this->smarty->assign('site_addresspostalcode', SITE_ADDRESSPOSTALCODE);
+		$this->smarty->assign('site_addresscountryname', SITE_ADDRESSCOUNTRYNAME);
+		$this->smarty->assign('site_openingtimes', SITE_OPENINGTIMES);
+		$this->smarty->assign('site_phone', SITE_PHONE);
+		$this->smarty->assign('site_lang', SITE_LANG);
+		$this->smarty->assign('site_language', SITE_LANGUAGE);
+		$this->smarty->assign('site_developer', SITE_DEVELOPER);
+		$this->smarty->assign('site_email', SITE_EMAIL);
+		$this->smarty->assign('site_geolatitude', SITE_GEOLATITUDE);
+		$this->smarty->assign('site_geolongitude', SITE_GEOLONGITUDE);
+		$this->smarty->assign('site_googleanalyticsid', SITE_GOOGLEANALYTICSID);
+		$this->smarty->assign('site_facebook', SITE_FACEBOOK);
+		$this->smarty->assign('site_googleplus', SITE_GOOGLEPLUS);
+		$this->smarty->assign('site_twitter', SITE_TWITTER);
+		$this->smarty->assign('site_pintrest', SITE_PINTREST);
+		$this->smarty->assign('facebook_type', FACEBOOK_TYPE);
+		$this->smarty->assign('facebook_title', FACEBOOK_TITLE);
+		$this->smarty->assign('facebook_description', FACEBOOK_DESCRIPTION);
+		$this->smarty->assign('facebook_url', FACEBOOK_URL);
+		$this->smarty->assign('facebook_logo', FACEBOOK_LOGO);
+		$this->smarty->assign('facebook_appid', FACEBOOK_APPID);
+
 		$this->smarty->loadFilter('output','trimwhitespace');
 
 		if(file_exists(VIEW_DIR.$file))
@@ -142,6 +172,36 @@ class View {
 			$smarty->Define('version',SITE_VERSION);
 			$smarty->Define('domain',SITE_DOMAIN);
 
+			$smarty->Define('site_headtitle', SITE_HEADTITLE);
+			$smarty->Define('site_description', SITE_DESCRIPTION);
+			$smarty->Define('site_title', SITE_TITLE);
+			$smarty->Define('site_subtitle', SITE_SUBTITLE);
+			$smarty->Define('site_addressfull', SITE_ADDRESSFULL);
+			$smarty->Define('site_addressstreet', SITE_ADDRESSSTREET);
+			$smarty->Define('site_addresslocality', SITE_ADDRESSLOCALITY);
+			$smarty->Define('site_addressregion', SITE_ADDRESSREGION);
+			$smarty->Define('site_addresspostalcode', SITE_ADDRESSPOSTALCODE);
+			$smarty->Define('site_addresscountryname', SITE_ADDRESSCOUNTRYNAME);
+			$smarty->Define('site_openingtimes', SITE_OPENINGTIMES);
+			$smarty->Define('site_phone', SITE_PHONE);
+			$smarty->Define('site_lang', SITE_LANG);
+			$smarty->Define('site_language', SITE_LANGUAGE);
+			$smarty->Define('site_developer', SITE_DEVELOPER);
+			$smarty->Define('site_email', SITE_EMAIL);
+			$smarty->Define('site_geolatitude', SITE_GEOLATITUDE);
+			$smarty->Define('site_geolongitude', SITE_GEOLONGITUDE);
+			$smarty->Define('site_googleanalyticsid', SITE_GOOGLEANALYTICSID);
+			$smarty->Define('site_facebook', SITE_FACEBOOK);
+			$smarty->Define('site_googleplus', SITE_GOOGLEPLUS);
+			$smarty->Define('site_twitter', SITE_TWITTER);
+			$smarty->Define('site_pintrest', SITE_PINTREST);
+			$smarty->Define('facebook_type', FACEBOOK_TYPE);
+			$smarty->Define('facebook_title', FACEBOOK_TITLE);
+			$smarty->Define('facebook_description', FACEBOOK_DESCRIPTION);
+			$smarty->Define('facebook_url', FACEBOOK_URL);
+			$smarty->Define('facebook_logo', FACEBOOK_LOGO);
+			$smarty->Define('facebook_appid', FACEBOOK_APPID);
+
 			$i18n = new I18n(SITE_LANG);
 			$smarty->Define('i18n',$i18n->getStrings());
 
@@ -184,6 +244,36 @@ class View {
 
 			$smarty->Define('version',SITE_VERSION);
 			$smarty->Define('domain',SITE_DOMAIN);
+
+			$smarty->Define('site_headtitle', SITE_HEADTITLE);
+			$smarty->Define('site_description', SITE_DESCRIPTION);
+			$smarty->Define('site_title', SITE_TITLE);
+			$smarty->Define('site_subtitle', SITE_SUBTITLE);
+			$smarty->Define('site_addressfull', SITE_ADDRESSFULL);
+			$smarty->Define('site_addressstreet', SITE_ADDRESSSTREET);
+			$smarty->Define('site_addresslocality', SITE_ADDRESSLOCALITY);
+			$smarty->Define('site_addressregion', SITE_ADDRESSREGION);
+			$smarty->Define('site_addresspostalcode', SITE_ADDRESSPOSTALCODE);
+			$smarty->Define('site_addresscountryname', SITE_ADDRESSCOUNTRYNAME);
+			$smarty->Define('site_openingtimes', SITE_OPENINGTIMES);
+			$smarty->Define('site_phone', SITE_PHONE);
+			$smarty->Define('site_lang', SITE_LANG);
+			$smarty->Define('site_language', SITE_LANGUAGE);
+			$smarty->Define('site_developer', SITE_DEVELOPER);
+			$smarty->Define('site_email', SITE_EMAIL);
+			$smarty->Define('site_geolatitude', SITE_GEOLATITUDE);
+			$smarty->Define('site_geolongitude', SITE_GEOLONGITUDE);
+			$smarty->Define('site_googleanalyticsid', SITE_GOOGLEANALYTICSID);
+			$smarty->Define('site_facebook', SITE_FACEBOOK);
+			$smarty->Define('site_googleplus', SITE_GOOGLEPLUS);
+			$smarty->Define('site_twitter', SITE_TWITTER);
+			$smarty->Define('site_pintrest', SITE_PINTREST);
+			$smarty->Define('facebook_type', FACEBOOK_TYPE);
+			$smarty->Define('facebook_title', FACEBOOK_TITLE);
+			$smarty->Define('facebook_description', FACEBOOK_DESCRIPTION);
+			$smarty->Define('facebook_url', FACEBOOK_URL);
+			$smarty->Define('facebook_logo', FACEBOOK_LOGO);
+			$smarty->Define('facebook_appid', FACEBOOK_APPID);
 
 			$i18n = new I18n(SITE_LANG);
 			$smarty->Define('i18n',$i18n->getStrings());

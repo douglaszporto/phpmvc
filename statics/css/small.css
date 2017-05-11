@@ -23,7 +23,7 @@
 		}
 
 		body{
-			background-color: #00a2ce;
+			background-color: #cacaca;
 			font-family: 'Open Sans', sans-serif;
 			font-size: 14px;
 			min-height: 100%;
@@ -35,6 +35,11 @@
 			font-weight: bold;
 		}
 
+		h1{
+			text-align: center;
+			margin-top: 100px;
+		}
+
 
 
 /* HEADER */
@@ -42,7 +47,7 @@
 			height: 80px;
 			line-height: 80px;
 			position: fixed;
-			background-color: #00b2de;
+			background-color: #555;
 			width: 100%;
 		}
 

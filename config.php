@@ -9,42 +9,40 @@
 	SITE_PRODUCTION: This flag define if site is on "Production" ou "Develop" mode 
 */
 
-define('SITE_NAME', 'Wii Fix Home');
+define('SITE_NAME', 'PHP MVC Framework');
 define('SITE_VERSION', '20150107');
-define('SITE_DOMAIN', '//localhost.wiifixbase');
+define('SITE_DOMAIN', '//localhost.sysbuilder');
 define('SITE_PRODUCTION', false);
 
-define('SITE_HEADTITLE', 'Wii Fix repair samsung galaxy repair apple iphone and sony');
-define('SITE_DESCRIPTION', 'Wii Fix  Free repair quote repair samsung galaxy repair apple iphone and repair sony xperia');
-define('SITE_TITLE', 'WiiFix Repair Apple, Samsung, Sony, Nokia, Microsoft and Nintendo');
-define('SITE_SUBTITLE', 'Repair company for Apple, Samsung, Sony, Nokia, Microsoft and Nintendo.');
-define('SITE_ADDRESSFULL', '250 Liverpool Road, Eccles, Manchester, M30 0SD');
-define('SITE_ADDRESSSTREET', '250 Liverpool Road');
-define('SITE_ADDRESSLOCALITY', 'Eccles');
-define('SITE_ADDRESSREGION', 'Manchester');
-define('SITE_ADDRESSPOSTALCODE', 'M30 0SD');
-define('SITE_ADDRESSCOUNTRYNAME', 'Lancashire');
-define('SITE_OPENINGTIMES', 'Monday - Sunday, 9am to 6pm');
-define('SITE_PHONE', '0161 278 1849');
-define('SITE_LANG','en-gb');
-define('SITE_LANGUAGE','english');
-define('SITE_DEVELOPER','WiiFix');
-define('SITE_EMAIL','Techdepartment@wii-fix.co.uk');
+define('SITE_HEADTITLE', 'PHP MVC - Douglas Zanotta');
+define('SITE_DESCRIPTION', 'Meu framework pra desnevolvimento PHP');
+define('SITE_TITLE', 'PHP MVC - Título');
+define('SITE_SUBTITLE', 'Subtítulo aqui');
+define('SITE_ADDRESSFULL', 'Endereço completo');
+define('SITE_ADDRESSSTREET', 'Rua');
+define('SITE_ADDRESSLOCALITY', 'Bairro');
+define('SITE_ADDRESSREGION', 'Cidade');
+define('SITE_ADDRESSPOSTALCODE', 'CEP');
+define('SITE_ADDRESSCOUNTRYNAME', 'Estado');
+define('SITE_OPENINGTIMES', 'De Segunda à Sexta - das 8h às 18h');
+define('SITE_PHONE', '99999 9999');
+define('SITE_LANG','pt-br');
+define('SITE_LANGUAGE','portuguese');
+define('SITE_DEVELOPER','Douglas Zanotta');
+define('SITE_EMAIL','contato@site.com');
 define('SITE_GEOLATITUDE','53.482582');
 define('SITE_GEOLONGITUDE','-2.354219');
 define('SITE_GOOGLEANALYTICSID','UA-XXXXXXXX-X');
-
 define('SITE_FACEBOOK', 'https://facebook.com/');
 define('SITE_GOOGLEPLUS', 'https://google.com/');
 define('SITE_TWITTER', 'https://twitter.com/');
 define('SITE_PINTREST', 'https://pintrest.com/');
-
 define('FACEBOOK_TYPE','business.business');
-define('FACEBOOK_TITLE','Wiifix.com');
-define('FACEBOOK_DESCRIPTION','Wii Fix  Repair Service Centre UK has the Best Engineers & Trained Experts. iPhone, Macbook, iPad mini, iPod  free repair quote.');
+define('FACEBOOK_TITLE','Site.com');
+define('FACEBOOK_DESCRIPTION','Descriçã complata para o Facebook');
 define('FACEBOOK_URL','http://www.wiifix.com');
-define('FACEBOOK_LOGO','http://wiifix.com/img/logo.png');
-define('FACEBOOK_APPID','244346806021763');
+define('FACEBOOK_LOGO', SITE_DOMAIN . '/statics/img/logo.png');
+define('FACEBOOK_APPID','123123123123123');
 
 /* 
 	DATABASE CONNECTION PARAMS
@@ -57,9 +55,9 @@ define('FACEBOOK_APPID','244346806021763');
 	DB_CHARSET: Default character encode 
 */
 define('DB_HOST', '127.0.0.1');
-define('DB_USER', 'wiifix');
-define('DB_PASS', 'Pass#word1');
-define('DB_DATABASE', 'wiifix');
+define('DB_USER', 'root');
+define('DB_PASS', '102030');
+define('DB_DATABASE', 'phpmvc');
 define('DB_DRIVER', 'mysql_pdo');
 define('DB_CHARSET', 'UTF-8');
 
